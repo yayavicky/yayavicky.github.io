@@ -36,7 +36,6 @@ jobs:
         if: ${{ github.ref == 'refs/heads/main' }}
         with:
           github_token: ${{ secrets.DEPLOY_TOKEN }}
-          keep_files: false
           publish_dir: ./public
           publish_branch: gh-pages
           
