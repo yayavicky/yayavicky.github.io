@@ -1,0 +1,84 @@
+<!doctype html><html class=no-js lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=x-ua-compatible content="IE=edge"><title>Hugo - Vicky's Notes</title><script>(function(a,b){a[b]=a[b].replace("no-js","js")})(document.documentElement,"className")</script><meta name=description content><meta property="og:title" content="Hugo"><meta property="og:description" content="Windows install choco install hugo -y choco install hugo-extended -y hugo help documents  quickstart offical quickstart  public 软连接
+mklink /j d:\code\web\public d:\code\web\Notes\public  本地预览的命令为 hugo server -D 生成生产版 public 的命令为 hugo 加上清理和压缩的参数，可以用 hugo --gc --minify --cleanDestinationDir。  自动发布  创建 yayavicky.github.io 仓库, public 将 yayavicky.github.io.source 仓库克隆到本地，开始初始化 Hugo 系统：  # 克隆 source 仓库 git clone git@github.com:yayavicky/yayavicky.github.io.git # 进入仓库 cd yayavicky.github.io./ # 在当前目录生成 Hugo 源码 hugo new site . # 为当前博客选取一个主题，你可以不执行这一命令使用默认的主题 #git submodule add https://github."><meta property="og:type" content="article"><meta property="og:url" content="https://yayavicky.github.io/tools/hugo/"><meta property="article:section" content="tools"><meta property="article:published_time" content="2021-11-16T11:53:29+08:00"><meta property="article:modified_time" content="2021-11-16T11:53:29+08:00"><meta itemprop=name content="Hugo"><meta itemprop=description content="Windows install choco install hugo -y choco install hugo-extended -y hugo help documents  quickstart offical quickstart  public 软连接
+mklink /j d:\code\web\public d:\code\web\Notes\public  本地预览的命令为 hugo server -D 生成生产版 public 的命令为 hugo 加上清理和压缩的参数，可以用 hugo --gc --minify --cleanDestinationDir。  自动发布  创建 yayavicky.github.io 仓库, public 将 yayavicky.github.io.source 仓库克隆到本地，开始初始化 Hugo 系统：  # 克隆 source 仓库 git clone git@github.com:yayavicky/yayavicky.github.io.git # 进入仓库 cd yayavicky.github.io./ # 在当前目录生成 Hugo 源码 hugo new site . # 为当前博客选取一个主题，你可以不执行这一命令使用默认的主题 #git submodule add https://github."><meta itemprop=datePublished content="2021-11-16T11:53:29+08:00"><meta itemprop=dateModified content="2021-11-16T11:53:29+08:00"><meta itemprop=wordCount content="258"><meta itemprop=keywords content="Tools,Web,"><meta name=twitter:card content="summary"><meta name=twitter:title content="Hugo"><meta name=twitter:description content="Windows install choco install hugo -y choco install hugo-extended -y hugo help documents  quickstart offical quickstart  public 软连接
+mklink /j d:\code\web\public d:\code\web\Notes\public  本地预览的命令为 hugo server -D 生成生产版 public 的命令为 hugo 加上清理和压缩的参数，可以用 hugo --gc --minify --cleanDestinationDir。  自动发布  创建 yayavicky.github.io 仓库, public 将 yayavicky.github.io.source 仓库克隆到本地，开始初始化 Hugo 系统：  # 克隆 source 仓库 git clone git@github.com:yayavicky/yayavicky.github.io.git # 进入仓库 cd yayavicky.github.io./ # 在当前目录生成 Hugo 源码 hugo new site . # 为当前博客选取一个主题，你可以不执行这一命令使用默认的主题 #git submodule add https://github."><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link rel=dns-prefetch href=//fonts.googleapis.com><link rel=dns-prefetch href=//fonts.gstatic.com><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700"><link rel=stylesheet href=/css/style.css><link rel=stylesheet href=/css/custom.css><link rel="shortcut icon" href=/favicon.ico></head><body class=body><div class="container container--outer"><header class=header><div class="container header__container"><div class="logo logo--mixed"><a class=logo__link href=/ title="Vicky's Notes" rel=home><div class="logo__item logo__imagebox"><img class=logo__img src=/img/paw.jpg></div><div class="logo__item logo__text"><div class=logo__title>Vicky's Notes</div></div></a></div><nav class=menu><button class=menu__btn aria-haspopup=true aria-expanded=false tabindex=0>
+<span class=menu__btn-title tabindex=-1>Menu</span></button><ul class=menu__list><li class="menu__item menu__item--active"><a class=menu__link href=/tools/hugo/><span class=menu__text>Hugo</span></a></li><li class=menu__item><a class=menu__link href=/env/netcardcheck/><span class=menu__text>Net Card Check</span></a></li></ul></nav></div></header><div class="wrapper flex"><div class=primary><main class=main role=main><article class=post><header class=post__header><h1 class=post__title>Hugo</h1><p class=post__lead>How to use hugo to create a static website.</p><div class="post__meta meta"><div class="meta__item-author meta__item"><svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2.0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class=meta__text>vicky</span></div><div class="meta__item-datetime meta__item"><svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class=meta__text datetime=2021-11-16T11:53:29+08:00>2021-11-16</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg><span class=meta__text><a class=meta__link href=/categories/tec/ rel=category>Tec</a>, <a class=meta__link href=/categories/documents/ rel=category>Documents</a></span></div></div></header><div class="post__toc toc"><div class=toc__title>Page content</div><div class=toc__menu><nav id=TableOfContents><ul><li><a href=#windows-install>Windows install</a></li><li><a href=#documents>documents</a></li><li><a href=#public>public</a></li><li><a href=#自动发布>自动发布</a><ul><li><a href=#配置-github-自动构建发布-actions-即可>配置 Github 自动构建发布 Actions 即可</a></li></ul></li></ul></nav></div></div><div class="content post__content clearfix"><h2 id=windows-install>Windows install</h2><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell>choco install hugo -y
+
+choco install hugo-extended  -y
+
+hugo help
+</code></pre></div><h2 id=documents>documents</h2><ul><li><a href=https://www.gohugo.org/doc/overview/quickstart/>quickstart</a></li><li><a href=https://gohugo.io/getting-started/quick-start/>offical quickstart</a></li></ul><h2 id=public>public</h2><p>软连接</p><pre><code class=language-powershel data-lang=powershel>mklink /j d:\code\web\public d:\code\web\Notes\public
+</code></pre><ul><li>本地预览的命令为 <code>hugo server -D</code></li><li>生成生产版 public 的命令为 <code>hugo</code></li><li>加上清理和压缩的参数，可以用 <code>hugo --gc --minify --cleanDestinationDir</code>。</li></ul><h2 id=自动发布>自动发布</h2><ol><li>创建 yayavicky.github.io 仓库, public</li><li>将 yayavicky.github.io.source 仓库克隆到本地，开始初始化 Hugo 系统：</li></ol><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=color:#75715e># 克隆 source 仓库</span>
+git clone git@github.com:yayavicky/yayavicky.github.io.git
+
+
+<span style=color:#75715e># 进入仓库</span>
+cd yayavicky.github.io./ 
+
+<span style=color:#75715e># 在当前目录生成 Hugo 源码</span>
+hugo new site . 
+
+<span style=color:#75715e># 为当前博客选取一个主题，你可以不执行这一命令使用默认的主题</span>
+<span style=color:#75715e>#git submodule add https://github.com/halogenica/beautifulhugo.git themes/beautifulhugo </span>
+git submodule add https://github.com/vimux/mainroad themes/mainroad
+
+<span style=color:#75715e># 编辑 config.toml 配置文件，使 mainroad 主题生效</span>
+echo <span style=color:#e6db74>&#39;theme = &#34;mainroad&#34;&#39;</span> &gt;&gt; config.toml
+
+<span style=color:#75715e># 此时你就可以运行预览效果</span>
+hugo serve
+
+git add .
+git commit -m <span style=color:#e6db74>&#34;first commit&#34;</span>
+git push -u origin main
+<span style=color:#75715e>#git branch -M main</span>
+
+</code></pre></div><h3 id=配置-github-自动构建发布-actions-即可>配置 Github 自动构建发布 Actions 即可</h3><blockquote><p>为 notes.github.io.source 仓库配置 Actions。</p></blockquote><p>main.yml</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=color:#f92672>name</span>: <span style=color:#ae81ff>GitHub Pages</span>
+
+<span style=color:#75715e># Controls when the workflow will run</span>
+<span style=color:#f92672>on</span>: [<span style=color:#ae81ff>push]</span>
+
+
+<span style=color:#75715e># A workflow run is made up of one or more jobs that can run sequentially or in parallel</span>
+<span style=color:#f92672>jobs</span>:
+  <span style=color:#75715e># This workflow contains a single job called &#34;build&#34;</span>
+  <span style=color:#f92672>build</span>:
+    <span style=color:#75715e># The type of runner that the job will run on</span>
+    <span style=color:#f92672>runs-on</span>: <span style=color:#ae81ff>ubuntu-20.04</span>
+    <span style=color:#f92672>concurrency</span>:
+      <span style=color:#f92672>group</span>: <span style=color:#ae81ff>${{ github.workflow }}-${{ github.ref }}</span>
+    
+
+    <span style=color:#75715e># Steps represent a sequence of tasks that will be executed as part of the job</span>
+    <span style=color:#f92672>steps</span>:
+      <span style=color:#75715e># Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it</span>
+      - <span style=color:#f92672>uses</span>: <span style=color:#ae81ff>actions/checkout@v2</span>
+        <span style=color:#f92672>with</span>:
+          <span style=color:#f92672>submodules</span>: <span style=color:#66d9ef>true</span>
+          <span style=color:#f92672>fetch-depth</span>: <span style=color:#ae81ff>0</span>
+          
+      - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Setup Hugo</span>
+        <span style=color:#f92672>uses</span>: <span style=color:#ae81ff>peaceiris/actions-hugo@v2</span>
+        <span style=color:#f92672>with</span>:
+          <span style=color:#f92672>hugo-version</span>: <span style=color:#e6db74>&#39;0.85.0&#39;</span>
+          <span style=color:#75715e># extended: true</span>
+
+      - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Build</span>
+        <span style=color:#f92672>run</span>: <span style=color:#ae81ff>hugo --minify</span>
+
+      - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Deploy</span>
+        <span style=color:#f92672>uses</span>: <span style=color:#ae81ff>peaceiris/actions-gh-pages@v3</span>
+        <span style=color:#f92672>if</span>: <span style=color:#ae81ff>${{ github.ref == &#39;refs/heads/main&#39; }}</span>
+        <span style=color:#f92672>with</span>:
+          <span style=color:#f92672>github_token</span>: <span style=color:#ae81ff>${{ secrets.DEPLOY_TOKEN }}</span>
+          <span style=color:#f92672>keep_files</span>: <span style=color:#66d9ef>false</span>
+          <span style=color:#f92672>publish_dir</span>: <span style=color:#ae81ff>./public</span>
+          <span style=color:#f92672>publish_branch</span>: <span style=color:#ae81ff>gh-pages</span>
+</code></pre></div></div><footer class=post__footer><div class="post__tags tags clearfix"><svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5.0 11V3C0 1.5.8.8.8.8S1.5.0 3 0h8c1.5.0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 100-6 3 3 0 000 6z"/></svg><ul class=tags__list><li class=tags__item><a class="tags__link btn" href=/tags/tools/ rel=tag>Tools</a></li><li class=tags__item><a class="tags__link btn" href=/tags/web/ rel=tag>Web</a></li></ul></div></footer></article></main><div class="authorbox clearfix"><figure class=authorbox__avatar><img alt="vicky avatar" src=/img/cat.jpg class=avatar height=90 width=90></figure><div class=authorbox__header><span class=authorbox__name>About vicky</span></div><div class=authorbox__description>.</div></div><nav class="pager flex"><div class="pager__item pager__item--next"><a class=pager__link href=/tools/vscode/ rel=next><span class=pager__subtitle>Next&#8201;»</span><p class=pager__title>VS Code</p></a></div></nav></div><aside class=sidebar><div class="widget-search widget"><form class=widget-search__form role=search method=get action=https://google.com/search><label><input class=widget-search__field type=search placeholder=SEARCH… name=q aria-label=SEARCH…></label>
+<input class=widget-search__submit type=submit value=Search>
+<input type=hidden name=sitesearch value=https://yayavicky.github.io/></form></div><div class="widget-recent widget"><h4 class=widget__title>Recent Posts</h4><div class=widget__content><ul class=widget__list><li class=widget__item><a class=widget__link href=/tools/vscode/>VS Code</a></li><li class=widget__item><a class=widget__link href=/tools/hugo/>Hugo</a></li></ul></div></div><div class="widget-taglist widget"><h4 class=widget__title>Tags</h4><div class=widget__content><a class="widget-taglist__link widget__link btn" href=/tags/env/ title=Env>Env</a>
+<a class="widget-taglist__link widget__link btn" href=/tags/go/ title=GO>GO</a>
+<a class="widget-taglist__link widget__link btn" href=/tags/linux/ title=Linux>Linux</a>
+<a class="widget-taglist__link widget__link btn" href=/tags/tools/ title=Tools>Tools</a>
+<a class="widget-taglist__link widget__link btn" href=/tags/web/ title=Web>Web</a></div></div></aside></div><footer class=footer><div class="container footer__container flex"><div class=footer__copyright>&copy; 2021 Vicky's Notes.
+<span class=footer__copyright-credits>Generated with <a href=https://gohugo.io/ rel="nofollow noopener" target=_blank>Hugo</a> and <a href=https://github.com/Vimux/Mainroad/ rel="nofollow noopener" target=_blank>Mainroad</a> theme.</span></div></div></footer></div><script async defer src=/js/menu.js></script><script src=/js/custom.js></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML" async></script></body></html>
