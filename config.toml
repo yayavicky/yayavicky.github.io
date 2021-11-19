@@ -1,4 +1,4 @@
-baseURL = '/'
+baseURL = 'https://yayavicky.github.io/'
 languageCode = 'en-us'
 title = "Vicky's Notes"
 theme = "mainroad"
