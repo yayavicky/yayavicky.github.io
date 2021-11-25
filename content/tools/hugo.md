@@ -2,7 +2,6 @@
 title: "Hugo"
 date: 2021-11-16T11:53:29+08:00
 draft: false
-toc: true # Enable Table of Contents for specific page
 
 tags: 
     - "Tools"
@@ -23,7 +22,7 @@ comments: false # Enable Disqus comments for specific page
 authorbox: true # Enable authorbox for specific page
 pager: true # Enable pager navigation (prev/next) for specific page
 toc: true 
-mathjax: true # Enable MathJax for specific page
+mathjax: false # Enable MathJax for specific page
 sidebar: "right" # Enable sidebar (on the right side) per page
 widgets: # Enable sidebar widgets in given order per page
   - "search"
@@ -58,6 +57,7 @@ mklink /j d:\code\web\public d:\code\web\Notes\public
 + 本地预览的命令为 `hugo server -D`
 + 生成生产版 public 的命令为 `hugo`
 + 加上清理和压缩的参数，可以用 `hugo --gc --minify --cleanDestinationDir`。
++ 添加新页面 `hugo new name.md`
 
 ## 自动发布
 
