@@ -12,7 +12,7 @@ keywords :
     - "setting"
     - "auto"
 
-menu: footer # Optional, add page to a menu. Options: main, side, footer
+# menu: footer # Optional, add page to a menu. Options: main, side, footer
 
 # Theme-Defined params
 # thumbnail: "img/placeholder.png" # Thumbnail image
