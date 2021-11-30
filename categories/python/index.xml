@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Python on Vicky's Notes</title><link>https://yayavicky.github.io/categories/python/</link><description>Recent content in Python on Vicky's Notes</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Except where otherwise noted, content on this site is licensed under a [Creative Commons Attribution 4.0 International license](https://creativecommons.org/licenses/by-sa/4.0/).</copyright><lastBuildDate>Tue, 30 Nov 2021 11:07:27 +0800</lastBuildDate><atom:link href="https://yayavicky.github.io/categories/python/index.xml" rel="self" type="application/rss+xml"/><item><title>Python Speed</title><link>https://yayavicky.github.io/thoughts/pythonspeed/</link><pubDate>Tue, 30 Nov 2021 11:07:27 +0800</pubDate><guid>https://yayavicky.github.io/thoughts/pythonspeed/</guid><description>What blocks Ruby, Python to get Javascript V8 speed?
+What blocks Ruby, Python to get Javascript V8 speed?
+Are there any Ruby / Python features that are blocking implementation of optimizations (e.g. inline caching) V8 engine has?
+Python is co-developed by Google guys so it shouldn&amp;rsquo;t be blocked by software patents.
+Or this is rather matter of resources put into the V8 project by Google.
+Nothing.
+Well, okay: money. (And time, people, resources, but if you have money, you can buy those.</description></item></channel></rss>
