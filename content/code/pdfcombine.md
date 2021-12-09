@@ -90,3 +90,38 @@ def write_pdf(org_pdfs, out_pdf):
 pdf_files = get_file_list(r"D:\temp\hebin")
 write_pdf(pdf_files, r"D:\temp\hebin.pdf")
 ```
+
+```python
+import os
+from win32com import client
+ 
+def doc2pdf(doc_name, pdf_name):
+    try:
+        word = client.DispatchEx("Word.Application")
+        if os.path.exists(pdf_name):
+            os.remove(pdf_name)
+        worddoc = word.Documents.Open(doc_name, ReadOnly=1)
+        worddoc.SaveAs(pdf_name, FileFormat=17)
+        worddoc.Close()
+        return pdf_name
+    except:
+        return 1
+def main():
+    print('开始转换，请稍等。。。')
+    path=os.getcwd()
+    files = os.scandir(path)
+    files = [i for i in files if '.doc' in os.path.basename(i)]
+    # print(files)
+    for i in files:
+        input = os.path.abspath(i)
+        output = f'{path}\\{os.path.basename(i).split(".")[0]}.pdf'
+        # print(output)
+        rc = doc2pdf(input, output)
+        if rc:
+            print(os.path.basename(i),'转换成功')
+        else:
+            print(os.path.basename(i),'转换失败')
+ 
+if __name__ == '__main__':
+    main()
+```

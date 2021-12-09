@@ -20,11 +20,11 @@ copyright = "Except where otherwise noted, content on this site is licensed unde
 [Params]
   subtitle = "" # Deprecated in favor of .Site.Params.logo.subtitle
   description = "" # Site description. Used in meta description
-  copyright = "" # Footer copyright holder, otherwise will use site title
+  copyright = "© 2021 Vicky's Notes." # Footer copyright holder, otherwise will use site title
   opengraph = true # Enable OpenGraph if true
   schema = true # Enable Schema
   twitter_cards = true # Enable Twitter Cards if true
-  readmore = false # Show "Read more" button in list if true
+  readmore = true # Show "Read more" button in list if true
   authorbox = true # Show authorbox at bottom of pages if true
   toc = true # Enable Table of Contents
   pager = true # Show pager navigation (prev/next links) at the bottom of pages if true
@@ -60,7 +60,7 @@ copyright = "Except where otherwise noted, content on this site is licensed unde
   list = "left"  # Configure layout for list pages
   single = false # Configure layout for single pages
   # Enable widgets in given order
-  widgets = ["search", "recent", "categories", "taglist", "social", "languages"]
+  widgets = ["search", "recent", "taglist", "social", "languages"] # "categories",
   # alternatively "ddg-search" can be used, to search via DuckDuckGo
   # widgets = ["ddg-search", "recent", "categories", "taglist", "social", "languages"]
 

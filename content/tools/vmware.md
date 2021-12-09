@@ -66,3 +66,10 @@ vmrun -T (ws|fusion|player) stop "指定虚拟机vmx文件路径"  soft
 2. 本地计算机策略 - 计算机配置 - Windows设置 - 脚本
 3. 右侧选择关机
 4. 将需要执行的关机或挂起命令写入 bat 文件
+
+
+## ssh 远程关机
+
+```shell
+/sbin/shutdown.sh && /sbin/poweroff
+```
