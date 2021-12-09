@@ -1,5 +1,5 @@
 ---
-title: "Offlinepython"
+title: "Python 环境离线安装"
 date: 2021-11-30T09:39:56+08:00
 draft: false
 tags: 
@@ -12,7 +12,7 @@ keywords :
     - "tools"
     - "script"
 
-menu: main # Optional, add page to a menu. Options: main, side, footer
+# menu: main # Optional, add page to a menu. Options: main, side, footer
 
 # Theme-Defined params
 # thumbnail: "img/placeholder.png" # Thumbnail image
