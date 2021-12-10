@@ -8,4 +8,4 @@
 用户配置—Windows设置—脚本(登录|注销) 右边，名称下选择 “登录”
 2. 命令创建一个快捷方式，将其放入启动文件夹 打开运行或者文件资源管理器，输入 shell:startup ，打开启动文件夹，或者直接打开目录 %appdata%\Microsoft\Windows\Start Menu\Programs\Startup ，将快捷方式放进去。
 Vmware 关机 # 挂起 vmrun -T (ws|fusion|player) suspend &amp;#34;指定虚拟机vmx文件路径&amp;#34; # 关机 vmrun -T (ws|fusion|player) stop &amp;#34;指定虚拟机vmx文件路径&amp;#34; soft soft 不可漏，会使虚拟机执行操作系统指定的关机程序
-gpedit.msc 本地计算机策略 - 计算机配置 - Windows设置 - 脚本 右侧选择关机 将需要执行的关机或挂起命令写入 bat 文件</description></item></channel></rss>
+gpedit.msc 本地计算机策略 - 计算机配置 - Windows设置 - 脚本 右侧选择关机 将需要执行的关机或挂起命令写入 bat 文件 ssh 远程关机 /sbin/shutdown.</description></item></channel></rss>
