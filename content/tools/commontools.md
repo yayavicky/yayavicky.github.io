@@ -30,4 +30,4 @@ widgets: # Enable sidebar widgets in given order per page
 
 ## 软件开发
 
-+ [版本号管理](https://yayavicky.github.io/tags/version/)
++ [版本号管理](https://yayavicky.github.io/code/version/)
