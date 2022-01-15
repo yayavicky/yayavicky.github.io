@@ -24,6 +24,7 @@ widgets: # Enable sidebar widgets in given order per page
 ## 机器配置
 
 + [Chocolatey](https://yayavicky.github.io/tools/chocolatey/)
++ [系统激活](https://yayavicky.github.io/env/kms/)
 + [Vmware](https://yayavicky.github.io/tools/vmware/)
 + [群晖](https://yayavicky.github.io/env/nas/)
 
