@@ -82,5 +82,5 @@ cscript ospp.vbs /act
 
 ## keys
 
-+ [windows 10][https://docs.microsoft.com/zh-cn/windows-server/get-started/kms-client-activation-keys]
++ [windows 10](https://docs.microsoft.com/zh-cn/windows-server/get-started/kms-client-activation-keys)
 + [Office 2016 & 2019](https://docs.microsoft.com/en-us/DeployOffice/vlactivation/gvlks)
