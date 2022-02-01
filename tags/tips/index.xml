@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tips on Vicky's Notes</title><link>https://yayavicky.github.io/tags/tips/</link><description>Recent content in Tips on Vicky's Notes</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Except where otherwise noted, content on this site is licensed under a [Creative Commons Attribution 4.0 International license](https://creativecommons.org/licenses/by-sa/4.0/).</copyright><lastBuildDate>Fri, 28 Jan 2022 21:28:18 +0800</lastBuildDate><atom:link href="https://yayavicky.github.io/tags/tips/index.xml" rel="self" type="application/rss+xml"/><item><title>Tips</title><link>https://yayavicky.github.io/res/tips/</link><pubDate>Fri, 28 Jan 2022 21:28:18 +0800</pubDate><guid>https://yayavicky.github.io/res/tips/</guid><description>修改Hosts临时解决GitHub的raw.githubusercontent.com无法链接的问题 查询真实IP 通过 IPAddress.com , 输入 raw.githubusercontent.com 查询到真实IP地址： 199.232.68.133
+修改hosts CentOS及macOS直接在终端输入
+sudo vi /etc/hosts
+添加以下内容保存即可
+199.232.4.133 raw.githubusercontent.com</description></item></channel></rss>

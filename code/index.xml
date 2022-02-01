@@ -13,4 +13,4 @@ Android版本号： 1、主版本号变化 Android2.x：仅支持手机等小平
 主版本号.次（子）版本号.修正版本号.日期版本号_阶段版本号_（修改次数）_开发者缩写
 例如：1.0.1.150325_beta_b3_ZainF
 附录： α（alpha）内部测试版 α版表示该产品只是一个初步完成的产品，通常只用于在开发者内部交流，也有很少一部分发布给专业的测试人员，一般情况下，该版本会存在较多bug，不适合普通用户使用。
-β（Beta）外部测试版 该版本相对于α版已经有了很大改进，消除了严重的错误，但可能依然存在一些缺陷，需要经过大规模的发布测试进一步发现、消除错误。这一版本通常由软件公司免费发布，通过一些专业的爱好者测试，将结果反馈给开发人员，开发者们再进行有针对性的修改，该版本一般不适合普通用户大规模安装使用。</description></item></channel></rss>
+β（Beta）外部测试版 该版本相对于α版已经有了很大改进，消除了严重的错误，但可能依然存在一些缺陷，需要经过大规模的发布测试进一步发现、消除错误。这一版本通常由软件公司免费发布，通过一些专业的爱好者测试，将结果反馈给开发人员，开发者们再进行有针对性的修改，该版本一般不适合普通用户大规模安装使用。</description></item><item><title>Qt5</title><link>https://yayavicky.github.io/code/qt5/</link><pubDate>Sat, 01 Feb 2020 11:57:03 +0800</pubDate><guid>https://yayavicky.github.io/code/qt5/</guid><description>资源 ui framework How to make Icon in QMenu larger (PyQt)?</description></item></channel></rss>
