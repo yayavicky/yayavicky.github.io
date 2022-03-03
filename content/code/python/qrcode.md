@@ -26,6 +26,8 @@ widgets: # Enable sidebar widgets in given order per page
   - "taglist"
 ---
 
+## 资料
+
 + [python-qrcode](https://github.com/lincolnloop/python-qrcode)
 
 
