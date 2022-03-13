@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<ftpConfig>
+	<Protocol>ftp</Protocol>
+	<HostName>192.168.2.137</HostName>
+	<UserName>uploadonly</UserName>
+	<Password>GeQe25v36mFD</Password>
+	<DllPath>D:\del\pstest\WinSCPnet.dll</DllPath>
+	<LogDir>D:\del\log</LogDir>
+	<Task>
+		<Item>
+			<LocalPath>D:\del\upload\test1\</LocalPath>
+			<RemotePath>Multimedia/backup/1/</RemotePath>
+		</Item>
+		<Item>
+			<LocalPath>D:\del\upload\test2\</LocalPath>
+			<RemotePath>Multimedia/backup/2/</RemotePath>
+		</Item>
+	</Task>
+</ftpConfig>
