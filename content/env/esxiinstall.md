@@ -84,15 +84,17 @@ ssh命令
 
 1. 查看虚拟机： vim-cmd vmsvc/getallvms
    会显示当前esxi上的虚拟机数量，每一个都有编号。 --获取所有虚拟机的vmid信息。
-
 2. 停用虚拟机：vim-cmd vmsvc/power.suspend + 之前命令显示编号即可》
    例： vim-cmd vmsvc/power.suspend 1
-
 3. 启动虚拟机：vim-cmd vmsvc/power.on + 之前命令显示编号即可》
-
 4. 重启虚拟机： vim-cmd vmsvc/power.reboot + 之前命令显示编号即可》
-
 5. 帮助命令：vim-cmd vmsvc help
+
+
+
+### 备份
+
+`ovftool.exe vi://root:@192.168.1.1/vmname  localPath/name.ova`
 
 
 
@@ -534,7 +536,6 @@ reboot
   + VMFS - 块操作
 
   + NFS - 文件写入
-
 + 存储技术
 
   + 直接连接 - 只服务于某台机器
@@ -543,7 +544,6 @@ reboot
   + iSCSI - IPSAN
   + vSAN - 软件虚拟SAN
   + NAS
-
 + 存储协议
 
   + 光纤通道
@@ -552,7 +552,6 @@ reboot
   + NFS
   + DAS
   + vSAN
-
 + 数据存储
 
   + 可使用一个或多个物理设备上的磁盘空间的逻辑存储单元
@@ -561,3 +560,4 @@ reboot
     + VMFS
     + NFS
     + vSAN
+  + 

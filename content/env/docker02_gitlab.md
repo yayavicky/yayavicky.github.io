@@ -69,6 +69,15 @@ ssh-keygen -t rsa -C "vicky_yang@iepds.com"
 
 
 
+ssh 连不上，debug
+
+```shell
+# port default 22
+ssh -vvvT git@ip:port
+```
+
+
+
 ## 进入gitlab docker
 
 
