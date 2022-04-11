@@ -1,0 +1,138 @@
+<!doctype html><html class=no-js lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=x-ua-compatible content="IE=edge"><title>- Vicky's Notes</title><script>(function(a,b){a[b]=a[b].replace("no-js","js")})(document.documentElement,"className")</script><meta name=description content><meta property="og:title" content><meta property="og:description" content="汉化版  汉化地址  docker run -d -p 3000:80 twang2218/gitlab-ce-zh:11.1.4
+gitlab 虚拟机配置
+ RAM至少 2G  /usr/local/docker/gitlab/docker-compose.yaml
+https://docs.gitlab.com/omnibus/settings/smtp.html
+version: '3' services: gitlab: image: 'twang2218/gitlab-ce-zh:11.1.4' container_name: gitlabzh restart: always hostname: '192.168.2.160' environment: TZ: 'Asia/Shanghai' GITLAB_OMNIBUS_CONFIG: | external_url 'http://192.168.2.160:80' gitlab_rails['time_zone'] = 'Asia/Shanghai'	 gitlab_rails['smtp_enable'] = true gitlab_rails['smtp_address'] = 'smtphz.qiye.163.com' gitlab_rails['smtp_port'] = 994 gitlab_rails['smtp_user_name'] = 'info@cetsc.com' gitlab_rails['smtp_password'] = '授权码' gitlab_rails['smtp_domain'] = '163.com' gitlab_rails['smtp_authentication'] = 'login' gitlab_rails['smtp_enable_starttls_auto'] = true gitlab_rails['smtp_tls'] = true gitlab_rails['gitlab_email_from'] = 'info@cetsc."><meta property="og:type" content="article"><meta property="og:url" content="https://yayavicky.github.io/env/docker02_gitlab/"><meta property="article:section" content="env"><meta itemprop=name content><meta itemprop=description content="汉化版  汉化地址  docker run -d -p 3000:80 twang2218/gitlab-ce-zh:11.1.4
+gitlab 虚拟机配置
+ RAM至少 2G  /usr/local/docker/gitlab/docker-compose.yaml
+https://docs.gitlab.com/omnibus/settings/smtp.html
+version: '3' services: gitlab: image: 'twang2218/gitlab-ce-zh:11.1.4' container_name: gitlabzh restart: always hostname: '192.168.2.160' environment: TZ: 'Asia/Shanghai' GITLAB_OMNIBUS_CONFIG: | external_url 'http://192.168.2.160:80' gitlab_rails['time_zone'] = 'Asia/Shanghai'	 gitlab_rails['smtp_enable'] = true gitlab_rails['smtp_address'] = 'smtphz.qiye.163.com' gitlab_rails['smtp_port'] = 994 gitlab_rails['smtp_user_name'] = 'info@cetsc.com' gitlab_rails['smtp_password'] = '授权码' gitlab_rails['smtp_domain'] = '163.com' gitlab_rails['smtp_authentication'] = 'login' gitlab_rails['smtp_enable_starttls_auto'] = true gitlab_rails['smtp_tls'] = true gitlab_rails['gitlab_email_from'] = 'info@cetsc."><meta itemprop=wordCount content="417"><meta itemprop=keywords content><meta name=twitter:card content="summary"><meta name=twitter:title content><meta name=twitter:description content="汉化版  汉化地址  docker run -d -p 3000:80 twang2218/gitlab-ce-zh:11.1.4
+gitlab 虚拟机配置
+ RAM至少 2G  /usr/local/docker/gitlab/docker-compose.yaml
+https://docs.gitlab.com/omnibus/settings/smtp.html
+version: '3' services: gitlab: image: 'twang2218/gitlab-ce-zh:11.1.4' container_name: gitlabzh restart: always hostname: '192.168.2.160' environment: TZ: 'Asia/Shanghai' GITLAB_OMNIBUS_CONFIG: | external_url 'http://192.168.2.160:80' gitlab_rails['time_zone'] = 'Asia/Shanghai'	 gitlab_rails['smtp_enable'] = true gitlab_rails['smtp_address'] = 'smtphz.qiye.163.com' gitlab_rails['smtp_port'] = 994 gitlab_rails['smtp_user_name'] = 'info@cetsc.com' gitlab_rails['smtp_password'] = '授权码' gitlab_rails['smtp_domain'] = '163.com' gitlab_rails['smtp_authentication'] = 'login' gitlab_rails['smtp_enable_starttls_auto'] = true gitlab_rails['smtp_tls'] = true gitlab_rails['gitlab_email_from'] = 'info@cetsc."><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link rel=dns-prefetch href=//fonts.googleapis.com><link rel=dns-prefetch href=//fonts.gstatic.com><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700"><link rel=stylesheet href=/css/style.css><link rel=stylesheet href=/css/custom.css><link rel="shortcut icon" href=/favicon.ico></head><body class=body><div class="container container--outer"><header class=header><div class="container header__container"><div class="logo logo--mixed"><a class=logo__link href=/ title="Vicky's Notes" rel=home><div class="logo__item logo__imagebox"><img class=logo__img src=/img/spaw.jpg></div><div class="logo__item logo__text"><div class=logo__title>Vicky's Notes</div></div></a></div><nav class=menu><button class=menu__btn aria-haspopup=true aria-expanded=false tabindex=0>
+<span class=menu__btn-title tabindex=-1>Menu</span></button><ul class=menu__list><li class=menu__item><a class=menu__link href=/tools/commontools/><span class=menu__text>常用工具</span></a></li></ul></nav></div></header><div class="wrapper flex"><div class=primary><main class=main role=main><article class=post><header class=post__header><h1 class=post__title></h1><div class="post__meta meta"><div class="meta__item-author meta__item"><svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2.0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class=meta__text>vicky</span></div></div></header><div class="post__toc toc"><div class=toc__title>Page content</div><div class=toc__menu><nav id=TableOfContents><ul><li><a href=#汉化版>汉化版</a></li><li><a href=#配置>配置</a><ul><li><a href=#ssh>SSH</a></li></ul></li><li><a href=#进入gitlab-docker>进入gitlab docker</a></li><li><a href=#备份>备份</a></li><li><a href=#image-备份>image 备份</a><ul><li><a href=#修改文件格式>修改文件格式</a></li></ul></li><li><a href=#本地https证书>本地https证书</a></li></ul></nav></div></div><div class="content post__content clearfix"><h2 id=汉化版>汉化版</h2><ul><li><a href=https://hub.docker.com/r/twang2218/gitlab-ce-zh>汉化地址</a></li></ul><p><code>docker run -d -p 3000:80 twang2218/gitlab-ce-zh:11.1.4</code></p><p>gitlab 虚拟机配置</p><ul><li>RAM至少 2G</li></ul><p><code>/usr/local/docker/gitlab/docker-compose.yaml</code></p><p><a href=https://docs.gitlab.com/omnibus/settings/smtp.html>https://docs.gitlab.com/omnibus/settings/smtp.html</a></p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=color:#f92672>version</span>: <span style=color:#e6db74>&#39;3&#39;</span>
+<span style=color:#f92672>services</span>:
+	<span style=color:#f92672>gitlab</span>:
+		<span style=color:#f92672>image</span>: <span style=color:#e6db74>&#39;twang2218/gitlab-ce-zh:11.1.4&#39;</span>
+		<span style=color:#f92672>container_name</span>: <span style=color:#ae81ff>gitlabzh</span>
+		<span style=color:#f92672>restart</span>: <span style=color:#ae81ff>always</span>
+		<span style=color:#f92672>hostname</span>: <span style=color:#e6db74>&#39;192.168.2.160&#39;</span>
+		<span style=color:#f92672>environment</span>:
+        	<span style=color:#f92672>TZ</span>: <span style=color:#e6db74>&#39;Asia/Shanghai&#39;</span>
+	        <span style=color:#f92672>GITLAB_OMNIBUS_CONFIG</span>: <span style=color:#ae81ff>|</span>
+	        <span style=color:#ae81ff>external_url &#39;http://192.168.2.160:80&#39;</span>
+	        <span style=color:#ae81ff>gitlab_rails[&#39;time_zone&#39;] = &#39;Asia/Shanghai&#39;	        	        		   </span>
+	        <span style=color:#ae81ff>gitlab_rails[&#39;smtp_enable&#39;] = true</span>
+	        <span style=color:#ae81ff>gitlab_rails[&#39;smtp_address&#39;] = &#39;smtphz.qiye.163.com&#39;</span>
+	        <span style=color:#ae81ff>gitlab_rails[&#39;smtp_port&#39;] = 994</span>
+	        <span style=color:#ae81ff>gitlab_rails[&#39;smtp_user_name&#39;] = &#39;info@cetsc.com&#39;</span>
+	        <span style=color:#ae81ff>gitlab_rails[&#39;smtp_password&#39;] = &#39;授权码&#39;</span>
+	        <span style=color:#ae81ff>gitlab_rails[&#39;smtp_domain&#39;] = &#39;163.com&#39;</span>
+	        <span style=color:#ae81ff>gitlab_rails[&#39;smtp_authentication&#39;] = &#39;login&#39;</span>
+	        <span style=color:#ae81ff>gitlab_rails[&#39;smtp_enable_starttls_auto&#39;] = true</span>
+	        <span style=color:#ae81ff>gitlab_rails[&#39;smtp_tls&#39;] = true</span>
+	        <span style=color:#ae81ff>gitlab_rails[&#39;gitlab_email_from&#39;] = &#39;info@cetsc.com&#39;</span>
+	        <span style=color:#ae81ff>gitlab_rails[&#39;gitlab_email_reply_to&#39;] = &#39;info@cetsc.com&#39; </span>
+	        <span style=color:#ae81ff>gitlab_rails[&#39;smtp_pool&#39;] = true</span>
+	        <span style=color:#ae81ff>gitlab_rails[&#39;gitlab_shell_ssh_port&#39;] = 2222</span>
+	        <span style=color:#ae81ff>unicorn[&#39;port&#39;] = 8888</span>
+	        <span style=color:#ae81ff>nginx[&#39;listen_port&#39;] = 443</span>
+	        <span style=color:#ae81ff>nginx[&#39;redirect_http_to_https&#39;]= true</span>
+	        <span style=color:#ae81ff>nginx[&#39;ssl_certificate&#39;]= &#34;/etc/gitlab/ssl/server.crt&#34;</span>
+	        <span style=color:#ae81ff>nginx[&#39;ssl_certificate_key&#39;]= &#34;/etc/gitlab/ssl/server.key&#34;</span>
+        <span style=color:#f92672>ports</span>:
+	        - <span style=color:#e6db74>&#39;8080:80&#39;</span>
+    	    - <span style=color:#e6db74>&#39;443:443&#39;</span>
+        	- <span style=color:#e6db74>&#39;2222:22&#39;</span>
+        <span style=color:#f92672>volumes</span>:
+        	- <span style=color:#ae81ff>/usr/local/docker/gitlab/config:/etc/gitlab</span>
+	        - <span style=color:#ae81ff>/usr/local/docker/gitlab/data:/var/opt/gitlab</span>
+    	    - <span style=color:#ae81ff>/usr/local/docker/gitlab/logs:/var/log/gitlab</span>
+        <span style=color:#f92672>networks</span>:
+        	- <span style=color:#ae81ff>gitlab_net</span>
+</code></pre></div><blockquote><p>区别：</p><ol><li><code>STARTTLS</code> 是对纯文本通信协议的扩展。它将纯文本连接升级为加密连接（<code>TLS</code> 或 <code>SSL</code>）， 而不是使用一个单独的加密通信端口。</li><li>RFC 2595定义了<code>IMAP</code>和<code>POP3</code> 的 <code>STARTTLS</code>，RFC 3207定义了SMTP的 <code>STARTTLS</code>，RFC 4642定义了<code>NNTP</code>的<code>STARTTLS</code>。</li><li><code>TLS</code> 是独立于应用层的协议。高层协议可以透明地分布在 <code>TLS</code> 协议上面。然而，<code>TLS</code> 标准并没有规定应用程序如何在 <code>TLS</code> 上增加安全性。</li></ol></blockquote><ul><li><a href=https://www.zhaokeli.com/article/8633.html>备份方案</a></li></ul><h2 id=配置>配置</h2><p>root 用户配置</p><ol><li>去掉头像系统</li><li>关闭注册</li></ol><h3 id=ssh>SSH</h3><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>ssh-keygen -t rsa -C <span style=color:#e6db74>&#34;info@cetsc.com&#34;</span>
+</code></pre></div><p>小乌龟的ssh 客户端需要改成 git 原生ssh.exe</p><p>ssh 连不上，debug</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=color:#75715e># port default 22</span>
+ssh -vvvT git@ip:port
+</code></pre></div><h2 id=进入gitlab-docker>进入gitlab docker</h2><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>docker exec -it gitlab /bin/sh
+docker exec -it 477f32b29454 /bin/sh
+ 
+ 
+<span style=color:#75715e># 停止数据连接服务</span>
+<span style=color:#75715e># gitlab-ctl stop unicorn</span>
+ok: down: unicorn: 1s, normally up
+
+<span style=color:#75715e># gitlab-ctl stop sidekiq</span>
+ok: down: sidekiq: 8s, normally up
+
+<span style=color:#75715e># 备份数据</span>
+<span style=color:#75715e># gitlab-rake gitlab:backup:create</span>
+Dumping database ...
+Dumping PostgreSQL database gitlabhq_production ... <span style=color:#f92672>[</span>DONE<span style=color:#f92672>]</span>
+<span style=color:#66d9ef>done</span>
+Dumping repositories ...
+<span style=color:#66d9ef>done</span>
+Dumping uploads ...
+<span style=color:#66d9ef>done</span>
+Dumping builds ...
+<span style=color:#66d9ef>done</span>
+Dumping artifacts ...
+<span style=color:#66d9ef>done</span>
+Dumping pages ...
+<span style=color:#66d9ef>done</span>
+Dumping lfs objects ...
+<span style=color:#66d9ef>done</span>
+Dumping container registry images ...
+<span style=color:#f92672>[</span>DISABLED<span style=color:#f92672>]</span>
+Creating backup archive: 1648025589_2022_03_23_11.1.4_gitlab_backup.tar ... <span style=color:#66d9ef>done</span>
+Uploading backup archive to remote storage  ... skipped
+Deleting tmp directories ... <span style=color:#66d9ef>done</span>
+<span style=color:#66d9ef>done</span>
+<span style=color:#66d9ef>done</span>
+<span style=color:#66d9ef>done</span>
+<span style=color:#66d9ef>done</span>
+<span style=color:#66d9ef>done</span>
+<span style=color:#66d9ef>done</span>
+<span style=color:#66d9ef>done</span>
+Deleting old backups ... skipping
+</code></pre></div><h2 id=备份>备份</h2><ol><li>进入容器 <code>docker exec -it gitlabzh /bin/sh</code></li><li>重新生成配置 <code>gitlab-ctl reconfigure</code></li><li>重启gitlab 服务 <code>gitlab-ctl restart</code></li><li>备份数据 <code>docker exec -it gitlabzh gitlab-rake gitlab:backup:create</code></li><li>恢复数据<ol><li><code>gdocker exec -it gitlabzh gitlab-rake gitlab:backup:restore BACKUP=1530156812_2018_06_28_10.8.4</code></li></ol></li></ol><h2 id=image-备份>image 备份</h2><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>docker image save twang2218/gitlab-ce-zh:11.1.4  -o gitlab-ce-zh_11.1.4.img  <span style=color:#75715e># 备份镜像</span>
+
+docker image load -i gitlab-ce-zh_11.1.4.img  <span style=color:#75715e># 导入镜像</span>
+
+docker network create gitlab_net
+docker-compose up  <span style=color:#75715e>#创建并启动</span>
+</code></pre></div><h3 id=修改文件格式>修改文件格式</h3><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>vi file_name
+
+<span style=color:#75715e># 查看原格式</span>
+:set ff
+
+<span style=color:#75715e># 修改编码格式</span>
+:set ff<span style=color:#f92672>=</span>unix
+</code></pre></div><blockquote><p>Unix及类Unix系统里，每行结尾只有换行“\n”，Windows系统里面，每行结尾是换行+回车“\n\r”，编码格式不一样。</p></blockquote><h2 id=本地https证书>本地https证书</h2><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=color:#75715e># 1. 建立权限并生成证书</span>
+mkdir -p /etc/gitlab/ssl <span style=color:#f92672>&amp;&amp;</span> chmod <span style=color:#ae81ff>700</span> /etc/gitlab/ssl <span style=color:#f92672>&amp;&amp;</span> cd/etc/gitlab/ssl
+
+<span style=color:#75715e># 2. 创建服务器私钥，需要输入一个密码，之后也会用到，我设置的 1qaz2wsx</span>
+openssl genrsa -des3 -out server.key <span style=color:#ae81ff>1024</span>
+
+<span style=color:#75715e># 3. 创建签名的证书（csr）</span>
+openssl req -new -key server.key -out server.csr
+
+<span style=color:#75715e># 国家 ch</span>
+<span style=color:#75715e># 省份 js</span>
+<span style=color:#75715e># 城市 wx</span>
+<span style=color:#75715e># 公司 epds</span>
+<span style=color:#75715e># 公司部门 epds</span>
+<span style=color:#75715e># common Name 192.168.2.160</span>
+<span style=color:#75715e># email address info@iepds.com</span>
+<span style=color:#75715e># challenge password 1qaz2wsx</span>
+
+<span style=color:#75715e># 4. 备份key</span>
+cp server.key server.key.org
+
+<span style=color:#75715e># 5. 直接覆盖了server.key了</span>
+openssl rsa -in server.key.org -out server.key
+
+<span style=color:#75715e># 6. 标记证书使用上述私钥和CSR：（把csr标记后转换成了crt nginx要用key和crt文件）</span>
+openssl x509 -req -days <span style=color:#ae81ff>365</span> -in server.csr -signkey server.key -out server.crt
+</code></pre></div><blockquote><p>企业邮箱 <a href=https://qy.163.com/login/>https://qy.163.com/login/</a></p></blockquote></div></article></main><div class="authorbox clearfix"><figure class=authorbox__avatar><img alt="vicky avatar" src=/img/cat.jpg class=avatar height=90 width=90></figure><div class=authorbox__header><span class=authorbox__name>About vicky</span></div><div class=authorbox__description>.</div></div><nav class="pager flex"><div class="pager__item pager__item--prev"><a class=pager__link href=/env/esxiinstall/ rel=prev><span class=pager__subtitle>«&#8201;Previous</span><p class=pager__title></p></a></div><div class="pager__item pager__item--next"><a class=pager__link href=/env/docker01/ rel=next><span class=pager__subtitle>Next&#8201;»</span><p class=pager__title></p></a></div></nav></div></div><footer class=footer><div class="container footer__container flex"><div class=footer__links><a class=footer__link href=/code/pdfcombine/>Pdf Combine</a> | <a class=footer__link href=/code/python/>Python</a> | <a class=footer__link href=/code/qt5/>Qt5</a></div><div class=footer__copyright>&copy; 2022 © 2021 Vicky's Notes..
+<span class=footer__copyright-credits>Generated with <a href=https://gohugo.io/ rel="nofollow noopener" target=_blank>Hugo</a> and <a href=https://github.com/Vimux/Mainroad/ rel="nofollow noopener" target=_blank>Mainroad</a> theme.</span></div></div></footer></div><script async defer src=/js/menu.js></script><script src=/js/custom.js></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML" async></script></body></html>

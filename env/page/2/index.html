@@ -7,8 +7,21 @@ wmic os get caption 设置系统key
 slmgr /ipk xxxxx-xxxxx-xxxxx-xxxxx-xxxxx 设置服务器
 slmgr /skms Your IP or Domain:1688 激活
 slmgr /ato Office 关于 Office 的激活，要求必须是 VOL 版本，否则无法激活。 找到你的 Office 安装目录，32 位默认一般为 C:\Program Files (x86)\Microsoft Office\Office16 64 位默认一般为 C:\Program Files\Microsoft Office\Office1。 Office16 是 Office 2016，Office15 就是 Office 2013，Office14 就是 Office 2010。 打开以上所说的目录，应该有个 OSPP.VBS 文件。 使用管理员权限运行 cmd 进入 Office 目录，命令如下：
-cd "C:\Program Files (x86)\Microsoft Office\Office16" cscript ospp.vbs /sethst:Your IP or Domain cscript ospp.</div><div class="list__footer clearfix"><a class="list__footer-readmore btn" href=/env/kms/>Read more…</a></div></article></main><div class=pagination><a class="pagination__item pagination__item--prev btn" href=/env/>«</a>
-<span class="pagination__item pagination__item--current">2/2</span></div></div><aside class="sidebar sidebar--left"><div class="widget-search widget"><form class=widget-search__form role=search method=get action=https://google.com/search><label><input class=widget-search__field type=search placeholder=SEARCH… name=q aria-label=SEARCH…></label>
+cd "C:\Program Files (x86)\Microsoft Office\Office16" cscript ospp.vbs /sethst:Your IP or Domain cscript ospp.</div><div class="list__footer clearfix"><a class="list__footer-readmore btn" href=/env/kms/>Read more…</a></div></article><article class="list__item post"><header class=list__header><h2 class="list__title post__title"><a href=/env/dell740raid/ rel=bookmark></a></h2><div class="list__meta meta"><div class="meta__item-author meta__item"><svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2.0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class=meta__text>vicky</span></div></div></header><div class="content list__excerpt post__content clearfix">Dell R740服务器新版Raid设置图文教程 1. 进入BIOS 开机后，在此界面时按F2键进入BIOS
+2. 启动方式 进入“System BIOS”→“Boot Settings” →“Boot Mode”，选择“UEFI”
+3. Device Setting 返回主界面，进入 “Device Settings”
+选择“RAID Controller in Slot 6:Dell Utility”
+3.1 Main Menu 通过Tab键进行切换，选择“Main Menu”
+选择“Configuration Management”，配置Raid
+当前并没有Raid，选择“Create Virtual Disk”创建一个虚拟磁盘
+在该服务器上只有两块本地磁盘，只能创建Raid0或Raid1，这里我们创建Raid1，然后点击“Select Physical Disks”选择需要加入此Raid的磁盘
+将本地的两块磁盘全部选择上，然后点击“Apply Changes”进行提交，并点击“OK”
+在虚拟磁盘的配置选项中，只需要将“Default Initialization”设置为Fast，表示创建该虚拟磁盘后，进行快速初始化；然后点击“Create Virtual Disk”创建虚拟磁盘
+确实是否提交该操作，利用光标键在“Confirm”前面的方框中打上勾并点击“Yes”进行确认，并点击“OK”
+接下来使用“Esc”键返回到主界面，并再次按“Esc”退出键，提示是否退出，选择“Yes”退出
+4）Raid配置好后，接下来将操作系统的ISO文件映射到服务器，开始安装操作系统</div></article></main><div class=pagination><a class="pagination__item pagination__item--prev btn" href=/env/>«</a>
+<span class="pagination__item pagination__item--current">2/4</span>
+<a class="pagination__item pagination__item--next btn" href=/env/page/3/>»</a></div></div><aside class="sidebar sidebar--left"><div class="widget-search widget"><form class=widget-search__form role=search method=get action=https://google.com/search><label><input class=widget-search__field type=search placeholder=SEARCH… name=q aria-label=SEARCH…></label>
 <input class=widget-search__submit type=submit value=Search>
 <input type=hidden name=sitesearch value=https://yayavicky.github.io/></form></div><div class="widget-recent widget"><h4 class=widget__title>Recent Posts</h4><div class=widget__content><ul class=widget__list><li class=widget__item><a class=widget__link href=/code/python/type/>Type</a></li><li class=widget__item><a class=widget__link href=/code/pyvisa/>Python Visa</a></li><li class=widget__item><a class=widget__link href=/res/tips/>Tips</a></li><li class=widget__item><a class=widget__link href=/res/svg/>SVG Resource</a></li><li class=widget__item><a class=widget__link href=/tools/commontools/>常用工具</a></li></ul></div></div><div class="widget-taglist widget"><h4 class=widget__title>Tags</h4><div class=widget__content><a class="widget-taglist__link widget__link btn" href=/tags/code/ title=Code>Code</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/coding/ title=coding>coding</a>

@@ -1,0 +1,214 @@
+<!doctype html><html class=no-js lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=x-ua-compatible content="IE=edge"><title>- Vicky's Notes</title><script>(function(a,b){a[b]=a[b].replace("no-js","js")})(document.documentElement,"className")</script><meta name=description content><meta property="og:title" content><meta property="og:description" content="安装docker 1. 虚拟机 ubuntu 20.04 curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun 2. 设置国内镜像 vim /etc/docker/daemon.json { &#34;registry-mirrors&#34;:[ &#34;https://registry.docker-cn.com&#34;, &#34;https://kfwkfulq.mirror.aliyuncs.com&#34;, &#34;https://pee6w651.mirror.aliyuncs.com&#34;, &#34;https://21qq34jg.mirror.aliyuncs.com&#34; ] } 3. 免sudo 需root权限， 如使用sudo命令，环境变量会变化，需要避免环境变量变化
+sudo groupadd docker # 创建用户组 sudo usermod -aG docker $USER #当前用户加入用户组 newgrp docker # 刷新用户组权限 4. hello word docker run hello-world docker 常用命令 C/S 结构
+ docker client 发送指令 docker server 接收指令，管理镜像、容器、系统资源  docker --help
+docker 1.13 开始，命令分组
+1. 镜像操作 images子命令"><meta property="og:type" content="article"><meta property="og:url" content="https://yayavicky.github.io/env/docker01/"><meta property="article:section" content="env"><meta itemprop=name content><meta itemprop=description content="安装docker 1. 虚拟机 ubuntu 20.04 curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun 2. 设置国内镜像 vim /etc/docker/daemon.json { &#34;registry-mirrors&#34;:[ &#34;https://registry.docker-cn.com&#34;, &#34;https://kfwkfulq.mirror.aliyuncs.com&#34;, &#34;https://pee6w651.mirror.aliyuncs.com&#34;, &#34;https://21qq34jg.mirror.aliyuncs.com&#34; ] } 3. 免sudo 需root权限， 如使用sudo命令，环境变量会变化，需要避免环境变量变化
+sudo groupadd docker # 创建用户组 sudo usermod -aG docker $USER #当前用户加入用户组 newgrp docker # 刷新用户组权限 4. hello word docker run hello-world docker 常用命令 C/S 结构
+ docker client 发送指令 docker server 接收指令，管理镜像、容器、系统资源  docker --help
+docker 1.13 开始，命令分组
+1. 镜像操作 images子命令"><meta itemprop=wordCount content="1093"><meta itemprop=keywords content><meta name=twitter:card content="summary"><meta name=twitter:title content><meta name=twitter:description content="安装docker 1. 虚拟机 ubuntu 20.04 curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun 2. 设置国内镜像 vim /etc/docker/daemon.json { &#34;registry-mirrors&#34;:[ &#34;https://registry.docker-cn.com&#34;, &#34;https://kfwkfulq.mirror.aliyuncs.com&#34;, &#34;https://pee6w651.mirror.aliyuncs.com&#34;, &#34;https://21qq34jg.mirror.aliyuncs.com&#34; ] } 3. 免sudo 需root权限， 如使用sudo命令，环境变量会变化，需要避免环境变量变化
+sudo groupadd docker # 创建用户组 sudo usermod -aG docker $USER #当前用户加入用户组 newgrp docker # 刷新用户组权限 4. hello word docker run hello-world docker 常用命令 C/S 结构
+ docker client 发送指令 docker server 接收指令，管理镜像、容器、系统资源  docker --help
+docker 1.13 开始，命令分组
+1. 镜像操作 images子命令"><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link rel=dns-prefetch href=//fonts.googleapis.com><link rel=dns-prefetch href=//fonts.gstatic.com><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700"><link rel=stylesheet href=/css/style.css><link rel=stylesheet href=/css/custom.css><link rel="shortcut icon" href=/favicon.ico></head><body class=body><div class="container container--outer"><header class=header><div class="container header__container"><div class="logo logo--mixed"><a class=logo__link href=/ title="Vicky's Notes" rel=home><div class="logo__item logo__imagebox"><img class=logo__img src=/img/spaw.jpg></div><div class="logo__item logo__text"><div class=logo__title>Vicky's Notes</div></div></a></div><nav class=menu><button class=menu__btn aria-haspopup=true aria-expanded=false tabindex=0>
+<span class=menu__btn-title tabindex=-1>Menu</span></button><ul class=menu__list><li class=menu__item><a class=menu__link href=/tools/commontools/><span class=menu__text>常用工具</span></a></li></ul></nav></div></header><div class="wrapper flex"><div class=primary><main class=main role=main><article class=post><header class=post__header><h1 class=post__title></h1><div class="post__meta meta"><div class="meta__item-author meta__item"><svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2.0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class=meta__text>vicky</span></div></div></header><div class="post__toc toc"><div class=toc__title>Page content</div><div class=toc__menu><nav id=TableOfContents><ul><li><a href=#安装docker>安装docker</a><ul><li><a href=#1-虚拟机-ubuntu-2004>1. 虚拟机 ubuntu 20.04</a></li><li><a href=#2-设置国内镜像>2. 设置国内镜像</a></li><li><a href=#3-免sudo>3. 免sudo</a></li><li><a href=#4-hello-word>4. hello word</a></li></ul></li><li><a href=#docker-常用命令>docker 常用命令</a><ul><li><a href=#1-镜像操作>1. 镜像操作</a></li><li><a href=#2-网络>2. 网络</a></li><li><a href=#3-文件存储volume>3. 文件存储(volume)</a></li><li><a href=#4-容器>4. 容器</a></li></ul></li><li><a href=#搭建测试环境>搭建测试环境</a><ul><li><a href=#1-建立测试网络>1. 建立测试网络</a></li><li><a href=#2-搭建-selenium-grid-容器>2. 搭建 selenium grid 容器</a></li><li><a href=#3-启动ui录制容器>3. 启动UI录制容器</a></li></ul></li><li><a href=#服务器性能>服务器性能</a></li><li><a href=#多容器交互>多容器交互</a><ul><li><a href=#1-安装docker-compose>1. 安装docker-compose</a></li><li><a href=#2-docker-compose-命令>2. docker-compose 命令</a></li><li><a href=#3-docker-composeyaml>3. docker-compose.yaml</a></li><li><a href=#4-编排容器>4. 编排容器</a></li></ul></li><li><a href=#资料>资料</a></li></ul></nav></div></div><div class="content post__content clearfix"><h2 id=安装docker>安装docker</h2><h3 id=1-虚拟机-ubuntu-2004>1. 虚拟机 ubuntu 20.04</h3><pre><code>curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun
+</code></pre><h3 id=2-设置国内镜像>2. 设置国内镜像</h3><pre><code>vim /etc/docker/daemon.json
+</code></pre><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-json data-lang=json>{
+	<span style=color:#f92672>&#34;registry-mirrors&#34;</span>:[
+	<span style=color:#e6db74>&#34;https://registry.docker-cn.com&#34;</span>,
+	<span style=color:#e6db74>&#34;https://kfwkfulq.mirror.aliyuncs.com&#34;</span>,
+	<span style=color:#e6db74>&#34;https://pee6w651.mirror.aliyuncs.com&#34;</span>,
+	<span style=color:#e6db74>&#34;https://21qq34jg.mirror.aliyuncs.com&#34;</span>
+	]
+}
+</code></pre></div><h3 id=3-免sudo>3. 免sudo</h3><p>需root权限， 如使用sudo命令，环境变量会变化，需要避免环境变量变化</p><pre><code>sudo groupadd docker # 创建用户组
+sudo usermod -aG docker $USER  #当前用户加入用户组
+newgrp docker  # 刷新用户组权限
+</code></pre><h3 id=4-hello-word>4. hello word</h3><pre><code>docker run hello-world
+</code></pre><h2 id=docker-常用命令>docker 常用命令</h2><p>C/S 结构</p><ul><li>docker client 发送指令</li><li>docker server 接收指令，管理镜像、容器、系统资源</li></ul><p><code>docker --help</code></p><p>docker 1.13 开始，命令分组</p><h3 id=1-镜像操作>1. 镜像操作</h3><p><code>images</code>子命令</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>docker image --help
+</code></pre></div><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>epds@epds-test-pc:~$ docker image --help
+
+Usage:  docker image COMMAND
+
+Manage images
+
+Commands:
+  build       Build an image from a Dockerfile
+  history     Show the history of an image
+  import      Import the contents from a tarball to create a filesystem image
+  inspect     Display detailed information on one or more images
+  load        Load an image from a tar archive or STDIN
+  ls          List images
+  prune       Remove unused images
+  pull        Pull an image or a repository from a registry
+  push        Push an image or a repository to a registry
+  rm          Remove one or more images
+  save        Save one or more images to a tar archive <span style=color:#f92672>(</span>streamed to STDOUT by default<span style=color:#f92672>)</span>
+  tag         Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE
+
+Run <span style=color:#e6db74>&#39;docker image COMMAND --help&#39;</span> <span style=color:#66d9ef>for</span> more information on a command.
+</code></pre></div><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>docker iamge pull hello-world <span style=color:#75715e>#拉取镜像</span>
+docker image ls
+docker image inspect api:v2   <span style=color:#75715e># 查看镜像详细信息</span>
+docker image save hello-world -o hello.img <span style=color:#75715e># 导出镜像为文件</span>
+docker image rm hello-world:latest  <span style=color:#75715e># 删除镜像</span>
+docker image ls <span style=color:#75715e># 检查是否删除成功</span>
+docker image load -i hello.img  <span style=color:#75715e># 导入镜像</span>
+</code></pre></div><h3 id=2-网络>2. 网络</h3><p>环境部署的三个时代</p><ul><li>同一个服务器，部署多个网站，如果一个被入侵，全体挂掉</li><li>同一个服务器，安装多个虚拟机，虚拟机里部署网站</li><li>同一个服务器，多个容器（默认隔离）</li></ul><p>如果要测试，需打破隔离。</p><hr><p>网络管理命令 <code>network</code> 子命令</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>$docker network --help
+
+Usage:  docker network COMMAND
+
+Manage networks
+
+Commands:
+  connect     Connect a container to a network
+  create      Create a network
+  disconnect  Disconnect a container from a network
+  inspect     Display detailed information on one or more networks
+  ls          List networks
+  prune       Remove all unused networks
+  rm          Remove one or more networks
+
+Run <span style=color:#e6db74>&#39;docker network COMMAND --help&#39;</span> <span style=color:#66d9ef>for</span> more information on a command.
+</code></pre></div><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>docker network create my_net
+</code></pre></div><h3 id=3-文件存储volume>3. 文件存储(volume)</h3><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>$docker volume --help
+
+Usage:  docker volume COMMAND
+
+Manage volumes
+
+Commands:
+  create      Create a volume
+  inspect     Display detailed information on one or more volumes
+  ls          List volumes
+  prune       Remove all unused local volumes
+  rm          Remove one or more volumes
+
+Run <span style=color:#e6db74>&#39;docker volume COMMAND --help&#39;</span> <span style=color:#66d9ef>for</span> more information on a command.
+</code></pre></div><h3 id=4-容器>4. 容器</h3><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>$docker container --help
+
+Usage:  docker container COMMAND
+
+Manage containers
+
+Commands:
+  attach      Attach local standard input, output, and error streams to a running container
+  commit      Create a new image from a container<span style=color:#e6db74>&#39;s changes
+</span><span style=color:#e6db74>  cp          Copy files/folders between a container and the local filesystem
+</span><span style=color:#e6db74>  create      Create a new container
+</span><span style=color:#e6db74>  diff        Inspect changes to files or directories on a container&#39;</span>s filesystem
+  exec        Run a command in a running container
+  export      Export a container<span style=color:#e6db74>&#39;s filesystem as a tar archive
+</span><span style=color:#e6db74>  inspect     Display detailed information on one or more containers
+</span><span style=color:#e6db74>  kill        Kill one or more running containers
+</span><span style=color:#e6db74>  logs        Fetch the logs of a container
+</span><span style=color:#e6db74>  ls          List containers
+</span><span style=color:#e6db74>  pause       Pause all processes within one or more containers
+</span><span style=color:#e6db74>  port        List port mappings or a specific mapping for the container
+</span><span style=color:#e6db74>  prune       Remove all stopped containers
+</span><span style=color:#e6db74>  rename      Rename a container
+</span><span style=color:#e6db74>  restart     Restart one or more containers
+</span><span style=color:#e6db74>  rm          Remove one or more containers
+</span><span style=color:#e6db74>  run         Run a command in a new container
+</span><span style=color:#e6db74>  start       Start one or more stopped containers
+</span><span style=color:#e6db74>  stats       Display a live stream of container(s) resource usage statistics
+</span><span style=color:#e6db74>  stop        Stop one or more running containers
+</span><span style=color:#e6db74>  top         Display the running processes of a container
+</span><span style=color:#e6db74>  unpause     Unpause all processes within one or more containers
+</span><span style=color:#e6db74>  update      Update configuration of one or more containers
+</span><span style=color:#e6db74>  wait        Block until one or more containers stop, then print their exit codes
+</span><span style=color:#e6db74>
+</span><span style=color:#e6db74>Run &#39;</span>docker container COMMAND --help<span style=color:#960050;background-color:#1e0010>&#39;</span> <span style=color:#66d9ef>for</span> more information on a command.
+</code></pre></div><p>重点命令</p><ol><li>run 从镜像创建并启动容器</li><li>stop 停止容器</li><li>kill 强杀容器</li><li>restart 重启容器</li><li>logs 查看容器日志</li></ol><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>docker container run api:v2  <span style=color:#75715e># 启动容器</span>
+docker container run nginx
+</code></pre></div><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>$docker container ls
+CONTAINER ID   IMAGE     COMMAND                  CREATED              STATUS              PORTS     NAMES
+a5c5008e9af4   nginx     <span style=color:#e6db74>&#34;/docker-entrypoint.…&#34;</span>   About a minute ago   Up About a minute   80/tcp    peaceful_carson
+
+$docker stop a5c5008e9af4  <span style=color:#75715e>#关闭容器</span>
+$docker kill a5c5008e9af4  <span style=color:#75715e>#强制关闭容器</span>
+
+$docker restart a5c5008e9af4 
+
+$docker container logs a5c5008e9af4 <span style=color:#75715e># 查看容器控制台输出</span>
+
+</code></pre></div><p><code>run</code> 参数</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>docker run
+	--name my_hello  <span style=color:#75715e># 指定容器名称</span>
+	--rm  <span style=color:#75715e># 结束后自动删除</span>
+	--net my_net <span style=color:#75715e># 指定容器加入的网络</span>
+	--volume <span style=color:#e6db74>${</span>PWD<span style=color:#e6db74>}</span>:/tmp  <span style=color:#75715e># 把当前目录挂载到容器中</span>
+	-it  <span style=color:#75715e>#进入容器内部，挂载终端</span>
+	-d <span style=color:#75715e># 让容器后台运行</span>
+nginx
+bash <span style=color:#75715e># 容器要执行的命令</span>
+</code></pre></div><h2 id=搭建测试环境>搭建测试环境</h2><h3 id=1-建立测试网络>1. 建立测试网络</h3><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>docker network create test_net
+</code></pre></div><h3 id=2-搭建-selenium-grid-容器>2. 搭建 selenium grid 容器</h3><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>docker run --net test_net --name my_selenium --rm -d -p 4444:4444 -p 6900:5900 --shm-size<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;2g&#34;</span> selenium/standalone-chrome:4.1.2-20220317
+</code></pre></div><h3 id=3-启动ui录制容器>3. 启动UI录制容器</h3><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>docker run --net test_net --name my_video --rm -d -v /tmp/videos:/videos selenium/video:ffmpeg-4.3.1-20220317
+</code></pre></div><h2 id=服务器性能>服务器性能</h2><p>一般容器会控制大小，2核2G以内。</p><h2 id=多容器交互>多容器交互</h2><p>微服务特点</p><ol><li>对外暴露接口简单：一般只有一个HTTP接口</li><li>对内服务特别多：接口、数据、redis、消息队列、日志收集</li></ol><p>将测试代码放入微服务架构内：</p><ol><li>把测试代码打包为镜像</li><li>容器编排：让容器们一起运行</li></ol><p>docker-compose 用于定义和运行多容器的docker工具， 可以使用yaml配置程序和服务。</p><p>使用单个命令，创建并启动所有的服务。</p><h3 id=1-安装docker-compose>1. 安装docker-compose</h3><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=color:#75715e># ubuntu</span>
+sudo apt-get upgrade 
+sudo apt-get install docker-compose
+sudo apt-get clean
+</code></pre></div><h3 id=2-docker-compose-命令>2. docker-compose 命令</h3><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>$docker-compose --help
+Define and run multi-container applications with Docker.
+
+Usage:
+  docker-compose <span style=color:#f92672>[</span>-f &lt;arg&gt;...<span style=color:#f92672>]</span> <span style=color:#f92672>[</span>options<span style=color:#f92672>]</span> <span style=color:#f92672>[</span>COMMAND<span style=color:#f92672>]</span> <span style=color:#f92672>[</span>ARGS...<span style=color:#f92672>]</span>
+  docker-compose -h|--help
+
+Options:
+  -f, --file FILE             Specify an alternate compose file
+                              <span style=color:#f92672>(</span>default: docker-compose.yml<span style=color:#f92672>)</span>
+  -p, --project-name NAME     Specify an alternate project name
+                              <span style=color:#f92672>(</span>default: directory name<span style=color:#f92672>)</span>
+  --verbose                   Show more output
+  --log-level LEVEL           Set log level <span style=color:#f92672>(</span>DEBUG, INFO, WARNING, ERROR, CRITICAL<span style=color:#f92672>)</span>
+  --no-ansi                   Do not print ANSI control characters
+  -v, --version               Print version and exit
+  -H, --host HOST             Daemon socket to connect to
+
+  --tls                       Use TLS; implied by --tlsverify
+  --tlscacert CA_PATH         Trust certs signed only by this CA
+  --tlscert CLIENT_CERT_PATH  Path to TLS certificate file
+  --tlskey TLS_KEY_PATH       Path to TLS key file
+  --tlsverify                 Use TLS and verify the remote
+  --skip-hostname-check       Don<span style=color:#e6db74>&#39;t check the daemon&#39;</span>s hostname against the
+                              name specified in the client certificate
+  --project-directory PATH    Specify an alternate working directory
+                              <span style=color:#f92672>(</span>default: the path of the Compose file<span style=color:#f92672>)</span>
+  --compatibility             If set, Compose will attempt to convert keys
+                              in v3 files to their non-Swarm equivalent
+  --env-file PATH             Specify an alternate environment file
+
+Commands:
+  build              Build or rebuild services
+  bundle             Generate a Docker bundle from the Compose file
+  config             Validate and view the Compose file
+  create             Create services
+  down               Stop and remove containers, networks, images, and volumes
+  events             Receive real time events from containers
+  exec               Execute a command in a running container
+  help               Get help on a command
+  images             List images
+  kill               Kill containers
+  logs               View output from containers
+  pause              Pause services
+  port               Print the public port <span style=color:#66d9ef>for</span> a port binding
+  ps                 List containers
+  pull               Pull service images
+  push               Push service images
+  restart            Restart services
+  rm                 Remove stopped containers
+  run                Run a one-off command
+  scale              Set number of containers <span style=color:#66d9ef>for</span> a service
+  start              Start services
+  stop               Stop services
+  top                Display the running processes
+  unpause            Unpause services
+  up                 Create and start containers
+  version            Show the Docker-Compose version information
+</code></pre></div><h3 id=3-docker-composeyaml>3. docker-compose.yaml</h3><blockquote><ul><li>dockerfile 一定以FROM开头，指令建议大写。</li><li>docker-compose 一定以VERSION开头。指定了docker-compose版本<ul><li>列举服务<ul><li>镜像</li><li>容器名称，不是必须</li><li>启动方式</li><li>指定网络</li><li>port</li><li>环境变量</li><li>卷</li><li>启动依赖</li></ul></li></ul></li></ul></blockquote><p>主要 ：</p><ul><li>服务节点</li><li>服务直接的关系</li></ul><h3 id=4-编排容器>4. 编排容器</h3><p>接口项目容器 + 测试框架容器 = 测试结果容器</p><ol><li>构建镜像</li></ol><p>编排的前提是有镜像</p><p>在指定文件夹运行</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>docker-compose up  <span style=color:#75715e>#创建并启动</span>
+</code></pre></div><p>测试特别需求</p><p>当测试结束时，所有服务全部关闭</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=color:#75715e># 某一个镜像结束，全部服务停止</span>
+docker-compose up --abort-on-container-exit
+</code></pre></div><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell> docker start allure
+</code></pre></div><h2 id=资料>资料</h2><ul><li><a href=https://yeasy.gitbook.io/docker_practice/>前言 - Docker — 从入门到实践 - gitbook.io</a></li></ul></div></article></main><div class="authorbox clearfix"><figure class=authorbox__avatar><img alt="vicky avatar" src=/img/cat.jpg class=avatar height=90 width=90></figure><div class=authorbox__header><span class=authorbox__name>About vicky</span></div><div class=authorbox__description>.</div></div><nav class="pager flex"><div class="pager__item pager__item--prev"><a class=pager__link href=/env/docker02_gitlab/ rel=prev><span class=pager__subtitle>«&#8201;Previous</span><p class=pager__title></p></a></div><div class="pager__item pager__item--next"><a class=pager__link href=/env/dell740raid/ rel=next><span class=pager__subtitle>Next&#8201;»</span><p class=pager__title></p></a></div></nav></div></div><footer class=footer><div class="container footer__container flex"><div class=footer__links><a class=footer__link href=/code/pdfcombine/>Pdf Combine</a> | <a class=footer__link href=/code/python/>Python</a> | <a class=footer__link href=/code/qt5/>Qt5</a></div><div class=footer__copyright>&copy; 2022 © 2021 Vicky's Notes..
+<span class=footer__copyright-credits>Generated with <a href=https://gohugo.io/ rel="nofollow noopener" target=_blank>Hugo</a> and <a href=https://github.com/Vimux/Mainroad/ rel="nofollow noopener" target=_blank>Mainroad</a> theme.</span></div></div></footer></div><script async defer src=/js/menu.js></script><script src=/js/custom.js></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML" async></script></body></html>

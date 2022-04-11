@@ -1,0 +1,192 @@
+<!doctype html><html class=no-js lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=x-ua-compatible content="IE=edge"><title>- Vicky's Notes</title><script>(function(a,b){a[b]=a[b].replace("no-js","js")})(document.documentElement,"className")</script><meta name=description content><meta property="og:title" content><meta property="og:description" content="ESxi安装
+资料  Vmware ESXi 配置 IP 地址  1. 进入设置 按F2 进入配置界面
+配置 IP，DNS
+Troubleshooting Options 选项中打开 ssh， shell
+2. 检查系统配置 [xxx@ServerHost:~] df -h Filesystem Size Used Available Use% Mounted on VMFS-6 14.5T 2.1G 14.5T 0% /vmfs/volumes/datastore1 vfat 249.7M 148.4M 101.3M 59% /vmfs/volumes/e81b9b74-8045e3bd-4b51-d7552bfeb866 vfat 4.0G 4.9M 4.0G 0% /vmfs/volumes/6234553d-3be733cc-0421-34735aa48f92 vfat 249.7M 4.0K 249.7M 0% /vmfs/volumes/b83de17b-5e9b7fed-0b99-964b1e02b466 vfat 285.8M 173.8M 112.0M 61% /vmfs/volumes/62345536-210a1700-08d4-34735aa48f92 [xxx@ServerHost:~] fdisk -l *** *** The fdisk command is deprecated: fdisk does not handle GPT partitions."><meta property="og:type" content="article"><meta property="og:url" content="https://yayavicky.github.io/env/esxiinstall/"><meta property="article:section" content="env"><meta itemprop=name content><meta itemprop=description content="ESxi安装
+资料  Vmware ESXi 配置 IP 地址  1. 进入设置 按F2 进入配置界面
+配置 IP，DNS
+Troubleshooting Options 选项中打开 ssh， shell
+2. 检查系统配置 [xxx@ServerHost:~] df -h Filesystem Size Used Available Use% Mounted on VMFS-6 14.5T 2.1G 14.5T 0% /vmfs/volumes/datastore1 vfat 249.7M 148.4M 101.3M 59% /vmfs/volumes/e81b9b74-8045e3bd-4b51-d7552bfeb866 vfat 4.0G 4.9M 4.0G 0% /vmfs/volumes/6234553d-3be733cc-0421-34735aa48f92 vfat 249.7M 4.0K 249.7M 0% /vmfs/volumes/b83de17b-5e9b7fed-0b99-964b1e02b466 vfat 285.8M 173.8M 112.0M 61% /vmfs/volumes/62345536-210a1700-08d4-34735aa48f92 [xxx@ServerHost:~] fdisk -l *** *** The fdisk command is deprecated: fdisk does not handle GPT partitions."><meta itemprop=wordCount content="1121"><meta itemprop=keywords content><meta name=twitter:card content="summary"><meta name=twitter:title content><meta name=twitter:description content="ESxi安装
+资料  Vmware ESXi 配置 IP 地址  1. 进入设置 按F2 进入配置界面
+配置 IP，DNS
+Troubleshooting Options 选项中打开 ssh， shell
+2. 检查系统配置 [xxx@ServerHost:~] df -h Filesystem Size Used Available Use% Mounted on VMFS-6 14.5T 2.1G 14.5T 0% /vmfs/volumes/datastore1 vfat 249.7M 148.4M 101.3M 59% /vmfs/volumes/e81b9b74-8045e3bd-4b51-d7552bfeb866 vfat 4.0G 4.9M 4.0G 0% /vmfs/volumes/6234553d-3be733cc-0421-34735aa48f92 vfat 249.7M 4.0K 249.7M 0% /vmfs/volumes/b83de17b-5e9b7fed-0b99-964b1e02b466 vfat 285.8M 173.8M 112.0M 61% /vmfs/volumes/62345536-210a1700-08d4-34735aa48f92 [xxx@ServerHost:~] fdisk -l *** *** The fdisk command is deprecated: fdisk does not handle GPT partitions."><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link rel=dns-prefetch href=//fonts.googleapis.com><link rel=dns-prefetch href=//fonts.gstatic.com><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700"><link rel=stylesheet href=/css/style.css><link rel=stylesheet href=/css/custom.css><link rel="shortcut icon" href=/favicon.ico></head><body class=body><div class="container container--outer"><header class=header><div class="container header__container"><div class="logo logo--mixed"><a class=logo__link href=/ title="Vicky's Notes" rel=home><div class="logo__item logo__imagebox"><img class=logo__img src=/img/spaw.jpg></div><div class="logo__item logo__text"><div class=logo__title>Vicky's Notes</div></div></a></div><nav class=menu><button class=menu__btn aria-haspopup=true aria-expanded=false tabindex=0>
+<span class=menu__btn-title tabindex=-1>Menu</span></button><ul class=menu__list><li class=menu__item><a class=menu__link href=/tools/commontools/><span class=menu__text>常用工具</span></a></li></ul></nav></div></header><div class="wrapper flex"><div class=primary><main class=main role=main><article class=post><header class=post__header><h1 class=post__title></h1><div class="post__meta meta"><div class="meta__item-author meta__item"><svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2.0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class=meta__text>vicky</span></div></div></header><div class="post__toc toc"><div class=toc__title>Page content</div><div class=toc__menu><nav id=TableOfContents><ul><li><a href=#资料>资料</a></li><li><a href=#1-进入设置>1. 进入设置</a></li><li><a href=#2-检查系统配置>2. 检查系统配置</a><ul><li><a href=#issue-cve-2018-3646>Issue CVE-2018-3646</a></li></ul></li><li><a href=#3-快捷键>3. 快捷键</a><ul><li><a href=#备份>备份</a></li></ul></li><li><a href=#4-常用命令>4. 常用命令</a><ul><li><a href=#1-查看esxi版本>1. 查看Esxi版本</a></li><li><a href=#2-查看显示esxi硬件内核存储网络等信息>2. 查看显示ESXi硬件，内核，存储，网络等信息</a></li><li><a href=#3-列出esxi里知道的服务>3. 列出esxi里知道的服务</a></li><li><a href=#4-查看具体服务的情况>4. 查看具体服务的情况</a></li><li><a href=#5-重新启动vmware服务>5. 重新启动vmware服务</a></li><li><a href=#6-修改root的密码>6. 修改root的密码</a></li><li><a href=#7-设置kernel高级选项>7. 设置kernel高级选项</a></li><li><a href=#8-管理资源组>8. 管理资源组</a></li><li><a href=#9-列出你当前的虚拟交换机>9. 列出你当前的虚拟交换机</a></li><li><a href=#10-查看控制台的设置>10. 查看控制台的设置</a></li><li><a href=#11-列出系统的网卡>11. 列出系统的网卡</a></li><li><a href=#12-添加一个虚拟交换机名字叫internal连接到两块物理网卡重新启动服务vi就能看见了>12. 添加一个虚拟交换机，名字叫（internal）连接到两块物理网卡，（重新启动服务，vi就能看见了）</a></li><li><a href=#13--删除交换机注意别把控制台的交换机也删了>13. 删除交换机,(注意，别把控制台的交换机也删了）</a></li><li><a href=#14--删除交换机上的网卡>14. 删除交换机上的网卡</a></li><li><a href=#15--删除portgroup>15. 删除portgroup</a></li><li><a href=#16--创建-vmkernel-switch如果你希望使用vmotioniscsi的这些功能你必须创建通常是不需要添加网关的>16. 创建 vmkernel switch，如果你希望使用vmotion，iscsi的这些功能，你必须创建(通常是不需要添加网关的）</a></li><li><a href=#17--防火墙设置>17. 防火墙设置</a></li><li><a href=#18--路由管理>18. 路由管理</a></li><li><a href=#19--创建控制台>19. 创建控制台</a></li><li><a href=#20--添加nas设备a添加标签-o是nas服务器的名字或ip-s是nas输入的共享名字>20. 添加nas设备(a添加标签，-o，是nas服务器的名字或ip，-s是nas输入的共享名字）</a></li><li><a href=#21--nas连接管理>21. nas连接管理</a></li><li><a href=#22--扫描scsi设备上的lun信息>22. 扫描SCSI设备上的LUN信息</a></li><li><a href=#23--连接iscsi设备eenable-q查询-d-disable-s强迫搜索>23. 连接iscsi设备(e:enable q:查询 d, disable s:强迫搜索）</a></li><li><a href=#24--设置targetip>24. 设置targetip</a></li><li><a href=#25--列出和target的连接>25. 列出和target的连接</a></li><li><a href=#26--列出当前的磁盘>26. 列出当前的磁盘</a></li><li><a href=#27--内核dump管理工具>27. 内核dump管理工具</a></li><li><a href=#28--路径管理>28. 路径管理</a></li><li><a href=#29--esx授权管理配置>29. ESX授权管理配置</a></li><li><a href=#30--管理启动设备>30. 管理启动设备</a></li><li><a href=#31--执行initrd的初始化设置>31. 执行initrd的初始化设置</a></li><li><a href=#32--esxcfg-linuxnet在linux-debug模式中转换vswif设备命名为linux自带的eth命名规则>32. esxcfg-linuxnet（在linux debug模式中，转换vswif设备命名为linux自带的eth命名规则）</a></li><li><a href=#33--升级>33. 升级</a></li></ul></li><li><a href=#使用命令更改service-console-ip>使用命令更改Service Console IP</a><ul><li><a href=#1--使用cli创建service-console>1. 使用CLI创建Service Console</a></li></ul></li><li><a href=#网络>网络</a><ul><li><a href=#1-vmkernel-端口用途>1. VMKernel 端口用途</a></li><li><a href=#2-添加上行链路>2. 添加上行链路</a></li><li><a href=#3-列出ip>3. 列出IP</a></li><li><a href=#4-配置静态ip>4. 配置静态IP</a></li><li><a href=#5-安全策略>5. 安全策略</a></li><li><a href=#6-负载均衡>6. 负载均衡</a></li><li><a href=#7-基本存储>7. 基本存储</a></li></ul></li></ul></nav></div></div><div class="content post__content clearfix"><p>ESxi安装</p><h2 id=资料>资料</h2><ul><li><a href=https://techexpert.tips/zh-hans/vmware-zh-hans/vmware-esxi%e9%85%8d%e7%bd%aeip%e5%9c%b0%e5%9d%80/>Vmware ESXi 配置 IP 地址</a></li></ul><h2 id=1-进入设置>1. 进入设置</h2><p>按F2 进入配置界面</p><p>配置 IP，DNS</p><p>Troubleshooting Options 选项中打开 ssh， shell</p><h2 id=2-检查系统配置>2. 检查系统配置</h2><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=color:#f92672>[</span>xxx@ServerHost:~<span style=color:#f92672>]</span> df -h
+Filesystem   Size   Used Available Use% Mounted on
+VMFS-6      14.5T   2.1G     14.5T   0% /vmfs/volumes/datastore1
+vfat       249.7M 148.4M    101.3M  59% /vmfs/volumes/e81b9b74-8045e3bd-4b51-d7552bfeb866
+vfat         4.0G   4.9M      4.0G   0% /vmfs/volumes/6234553d-3be733cc-0421-34735aa48f92
+vfat       249.7M   4.0K    249.7M   0% /vmfs/volumes/b83de17b-5e9b7fed-0b99-964b1e02b466
+vfat       285.8M 173.8M    112.0M  61% /vmfs/volumes/62345536-210a1700-08d4-34735aa48f92
+<span style=color:#f92672>[</span>xxx@ServerHost:~<span style=color:#f92672>]</span> fdisk -l
+
+***
+*** The fdisk command is deprecated: fdisk does not handle GPT partitions.  Please use partedUtil
+***
+
+fdisk: device has more than 2^32 sectors, can<span style=color:#960050;background-color:#1e0010>&#39;</span>t use all of them
+Found valid GPT with protective MBR; using GPT
+
+Disk /dev/disks/naa.64cd98f0425d0b0029c70f903a432c6b: <span style=color:#ae81ff>4294967295</span> sectors, 4095M
+Logical sector size: <span style=color:#ae81ff>512</span>
+Disk identifier <span style=color:#f92672>(</span>GUID<span style=color:#f92672>)</span>: ac8bc8f9-3711-4348-91d9-c5278d46a107
+Partition table holds up to <span style=color:#ae81ff>128</span> entries
+First usable sector is 34, last usable sector is <span style=color:#ae81ff>31253856222</span>
+
+Number  Start <span style=color:#f92672>(</span>sector<span style=color:#f92672>)</span>    End <span style=color:#f92672>(</span>sector<span style=color:#f92672>)</span>  Size Name
+     <span style=color:#ae81ff>1</span>              <span style=color:#ae81ff>64</span>            <span style=color:#ae81ff>8191</span> 4064K
+     <span style=color:#ae81ff>2</span>         <span style=color:#ae81ff>7086080</span>        <span style=color:#ae81ff>15472639</span> 4095M
+     <span style=color:#ae81ff>3</span>        <span style=color:#ae81ff>15472640</span>     <span style=color:#ae81ff>31253856222</span> 14.5T
+     <span style=color:#ae81ff>5</span>            <span style=color:#ae81ff>8224</span>          <span style=color:#ae81ff>520191</span>  249M
+     <span style=color:#ae81ff>6</span>          <span style=color:#ae81ff>520224</span>         <span style=color:#ae81ff>1032191</span>  249M
+     <span style=color:#ae81ff>7</span>         <span style=color:#ae81ff>1032224</span>         <span style=color:#ae81ff>1257471</span>  109M
+     <span style=color:#ae81ff>8</span>         <span style=color:#ae81ff>1257504</span>         <span style=color:#ae81ff>1843199</span>  285M
+     <span style=color:#ae81ff>9</span>         <span style=color:#ae81ff>1843200</span>         <span style=color:#ae81ff>7086079</span> 2560M
+     
+     
+ partedUtil -l
+Usage:
+ Get Partitions : get &lt;diskName&gt;
+ Set Partitions : set &lt;diskName&gt; <span style=color:#f92672>[</span><span style=color:#e6db74>&#34;partNum startSector endSector type attr&#34;</span><span style=color:#f92672>]</span>*
+ Delete Partition : delete &lt;diskName&gt; &lt;partNum&gt;
+ Resize Partition : resize &lt;diskName&gt; &lt;partNum&gt; &lt;start&gt; &lt;end&gt;
+ Get Partitions : getptbl &lt;diskName&gt;
+ Set Partitions : setptbl &lt;diskName&gt; &lt;label&gt; <span style=color:#f92672>[</span><span style=color:#e6db74>&#34;partNum startSector endSector type/guid attr&#34;</span><span style=color:#f92672>]</span>*
+ Fix Partition Table : fix &lt;diskName&gt;
+ Create New Label <span style=color:#f92672>(</span>all existing data will be lost<span style=color:#f92672>)</span>: mklabel &lt;diskName&gt; &lt;label&gt;
+ Show commonly used partition type guids : showGuids
+ Get usable first and last sectors : getUsableSectors &lt;diskName&gt;
+ Fix GPT Table interactively : fixGpt &lt;diskName&gt;
+ Show Partition Information : partinfo &lt;diskName&gt; &lt;partNum&gt;
+ Add Partition Information : add &lt;diskName&gt; &lt;label&gt; <span style=color:#f92672>[</span><span style=color:#e6db74>&#34;partNum startSector endSector type/guid attr&#34;</span><span style=color:#f92672>]</span>
+</code></pre></div><h3 id=issue-cve-2018-3646>Issue CVE-2018-3646</h3><blockquote><p>登录ESXi6.7主机后，系统提示“该主机可能容易受到 CVE-2018-3646 中所描述问题的影响，有关详细信息和 VMware 建议，请参阅 <a href=https://kb.vmware.com/s/article/55636>https://kb.vmware.com/s/article/55636</a>。”</p></blockquote><ul><li>导航器&ndash;管理&ndash;系统&ndash;高级设置</li><li>搜索框输入<code>VMkernel.Boot.hyperthreadingMitigation</code><ul><li>禁止ESXi修补程序使用超线程</li></ul></li><li>编辑选项，改为True，保存</li><li>重新引导后提示消失</li></ul><h2 id=3-快捷键>3. 快捷键</h2><p><code>F2</code> 关机</p><p><code>F</code> 重启</p><p>ssh命令</p><ol><li>查看虚拟机： vim-cmd vmsvc/getallvms
+会显示当前esxi上的虚拟机数量，每一个都有编号。 &ndash;获取所有虚拟机的vmid信息。</li><li>停用虚拟机：vim-cmd vmsvc/power.suspend + 之前命令显示编号即可》
+例： vim-cmd vmsvc/power.suspend 1</li><li>启动虚拟机：vim-cmd vmsvc/power.on + 之前命令显示编号即可》</li><li>重启虚拟机： vim-cmd vmsvc/power.reboot + 之前命令显示编号即可》</li><li>帮助命令：vim-cmd vmsvc help</li></ol><h3 id=备份>备份</h3><p><code>ovftool.exe vi://root:@192.168.1.1/vmname localPath/name.ova</code></p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=color:#e6db74>&#39;C:\Program Files (x86)\VMware\VMware Workstation\OVFTool\ovftool.exe&#39;</span> vi://root:@192.168.1.1/vmname  D:<span style=color:#ae81ff>\C</span>Driver<span style=color:#ae81ff>\o</span>vf<span style=color:#ae81ff>\K</span>is01Office.ova
+</code></pre></div><h2 id=4-常用命令>4. 常用命令</h2><h3 id=1-查看esxi版本>1. 查看Esxi版本</h3><p><code>vmware –v1</code></p><h3 id=2-查看显示esxi硬件内核存储网络等信息>2. 查看显示ESXi硬件，内核，存储，网络等信息</h3><ul><li><p><code>esxcfg-info -a</code>（显示所有相关的信息）</p></li><li><p><code>esxcfg-info -w</code>（显示esx上硬件信息）</p></li></ul><h3 id=3-列出esxi里知道的服务>3. 列出esxi里知道的服务</h3><p><code>esxcfg-firewall –s</code></p><h3 id=4-查看具体服务的情况>4. 查看具体服务的情况</h3><p><code>esxcfg-firewall -q sshclinet</code></p><h3 id=5-重新启动vmware服务>5. 重新启动vmware服务</h3><p><code>service mgmt-vmware restart</code></p><h3 id=6-修改root的密码>6. 修改root的密码</h3><p><code>passwd root</code></p><h3 id=7-设置kernel高级选项>7. 设置kernel高级选项</h3><p><code>esxcfg-advcfg -d</code>（将系统内核恢复默认值）</p><h3 id=8-管理资源组>8. 管理资源组</h3><p><code>esxcfg-resgrp -l</code>（显示所有资源组）</p><h3 id=9-列出你当前的虚拟交换机>9. 列出你当前的虚拟交换机</h3><p><code>esxcfg-vswitch -l</code></p><p><code>esxcfg-vswitch -v 10 -p "Service Console" vSwitch0</code> (将vSwitch0上的Service Console划分到vLan 10上，如果vLan号为0则不设置vLan)</p><h3 id=10-查看控制台的设置>10. 查看控制台的设置</h3><ul><li><p><code>esxcfg-vswif -l</code> （列出已添加的网卡）</p></li><li><p><code>esxcfg-vswif -a</code> （添加网卡）</p></li></ul><h3 id=11-列出系统的网卡>11. 列出系统的网卡</h3><p><code>esxcfg-nics –l</code></p><h3 id=12-添加一个虚拟交换机名字叫internal连接到两块物理网卡重新启动服务vi就能看见了>12. 添加一个虚拟交换机，名字叫（internal）连接到两块物理网卡，（重新启动服务，vi就能看见了）</h3><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>esxcfg-vswitch -a vSwitch1
+esxcfg-vswitch -A internal vSwitch1
+esxcfg-vswitch -L vmnic1 vSwitch1
+esxcfg-vswitch -L vmnic2 vSwitch1
+</code></pre></div><h3 id=13--删除交换机注意别把控制台的交换机也删了>13. 删除交换机,(注意，别把控制台的交换机也删了）</h3><p><code>esxcfg-vswitch -D vSwitch1</code></p><h3 id=14--删除交换机上的网卡>14. 删除交换机上的网卡</h3><p><code>esxcfg-vswitch -u vmnic1 vswitch2</code></p><h3 id=15--删除portgroup>15. 删除portgroup</h3><p><code>esxcfg-vswitch -D internel vswitch1</code></p><h3 id=16--创建-vmkernel-switch如果你希望使用vmotioniscsi的这些功能你必须创建通常是不需要添加网关的>16. 创建 vmkernel switch，如果你希望使用vmotion，iscsi的这些功能，你必须创建(通常是不需要添加网关的）</h3><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>esxcfg-vswitch -l
+esxcfg-vswitch -a vswitch2
+esxcfg-vswitch -A <span style=color:#e6db74>&#34;vm kernel&#34;</span> vswitch2
+esxcfg-vswitch -L vmnic3 vswitch2
+esxcfg-vmknic -a <span style=color:#e6db74>&#34;vm kernel&#34;</span> -i 172.16.1.141 -n 255.255.252.0 （添加一个vmkernel）
+</code></pre></div><h3 id=17--防火墙设置>17. 防火墙设置</h3><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>esxcfg-firewall -e sshclient （打开防火墙ssh端口）
+esxcfg-firewall -d sshclient （关闭防火墙ssh端口）
+esxcfg-firewall -e veritasNetBackup（允许Veritas Netbackup服务）
+esxcfg-firewall -o 123，udp，out，ntp（为ntp服务打开UDP协议中的123端口的输出）
+</code></pre></div><h3 id=18--路由管理>18. 路由管理</h3><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>esxcfg-route（VM生成网卡的路由管理）
+esxcfg-route（显示路由表）
+esxcfg-route 172.16.0.254（设置vmkernel网关）
+</code></pre></div><h3 id=19--创建控制台>19. 创建控制台</h3><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>esxcfg-vswitch -a vSwitch0
+esxcfg-vswitch -A <span style=color:#e6db74>&#34;service console&#34;</span> vSwitch0
+esxcfg-vswitch -L vmnic0 vSwitch0
+esxcfg-vswif -a vswif0 -p <span style=color:#e6db74>&#34;service console&#34;</span> -i 172.16.1.140 -n 255.255.252.0
+</code></pre></div><h3 id=20--添加nas设备a添加标签-o是nas服务器的名字或ip-s是nas输入的共享名字>20. 添加nas设备(a添加标签，-o，是nas服务器的名字或ip，-s是nas输入的共享名字）</h3><p><code>esxcfg-nas -a isos -o nas.vmwar.cn -s isos</code></p><h3 id=21--nas连接管理>21. nas连接管理</h3><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>esxcfg-nas -r （强迫esx去连接nas服务器）
+esxcfg-nas -l   <span style=color:#f92672>(</span>用esxcfg-nas -l来看看结果）
+esxcfg-nas -a（添加NAS文件系统到/vmfs目录下）
+esxcfg-nas -d（删除NAS文件系统）
+</code></pre></div><h3 id=22--扫描scsi设备上的lun信息>22. 扫描SCSI设备上的LUN信息</h3><p><code>esxcfg-rescan &lt;vmkernel SCSI adapter name></code></p><h3 id=23--连接iscsi设备eenable-q查询-d-disable-s强迫搜索>23. 连接iscsi设备(e:enable q:查询 d, disable s:强迫搜索）</h3><p><code>esxcfg-swiscsi -e</code></p><h3 id=24--设置targetip>24. 设置targetip</h3><p><code>vmkiscsi-tool -D -a 172.16.1.133 vmhba40</code></p><h3 id=25--列出和target的连接>25. 列出和target的连接</h3><p><code>vmkiscsi-tool -l -T vmhba40</code></p><h3 id=26--列出当前的磁盘>26. 列出当前的磁盘</h3><p><code>ls -l /vmfs/devices/disks</code></p><h3 id=27--内核dump管理工具>27. 内核dump管理工具</h3><p><code>esxcfg-dumppart -l</code>（显示当前dump分区配置信息）</p><h3 id=28--路径管理>28. 路径管理</h3><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>esxcfg-mpath -l（显示所有路径）
+
+esxcfg-mpath -a（显示所有HBA卡）
+</code></pre></div><h3 id=29--esx授权管理配置>29. ESX授权管理配置</h3><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>esxcfg-auth
+
+esxcfg-auth --enablenis（运行NIS验证）
+</code></pre></div><h3 id=30--管理启动设备>30. 管理启动设备</h3><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>esxcfg-boot
+
+esxcfg-boot -b（更新启动设备）
+</code></pre></div><h3 id=31--执行initrd的初始化设置>31. 执行initrd的初始化设置</h3><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>esxcfg-init
+
+esxcfg-init（初始化设备）
+</code></pre></div><h3 id=32--esxcfg-linuxnet在linux-debug模式中转换vswif设备命名为linux自带的eth命名规则>32. esxcfg-linuxnet（在linux debug模式中，转换vswif设备命名为linux自带的eth命名规则）</h3><p><code>esxcfg-linuxnet --setup</code></p><h3 id=33--升级>33. 升级</h3><pre><code>esxcfg-upgrade（ESX2.X升级到ESX3.X）
+</code></pre><h2 id=使用命令更改service-console-ip>使用命令更改Service Console IP</h2><p>在CLI下更改 <code>service console</code> 的ip地址，注意大小写，vmware是把物理nic虚拟成vmnic，在vmnic上创建虚拟交换机vswitch，是把网卡当成交换机来使用，不能对网卡进行ip地址的设置，只能在vswitch上创建interface就是vswif，对vswif进行ip设置</p><h3 id=1--使用cli创建service-console>1. 使用CLI创建Service Console</h3><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>esxcfg-vswitch -a vSwitch0     <span style=color:#75715e>#创建vSwitch0</span>
+esxcfg-vswitch -A <span style=color:#e6db74>&#34;Service Console&#34;</span> vSwitch0   <span style=color:#75715e>#在vSwitch0上创建Portgroup,命名为Service Console</span>
+
+esxcfg-vswitch -L vmnic0 vSwitch0              <span style=color:#75715e>#将vmnic0绑定在vSwitch0</span>
+esxcfg-vswitch –l         <span style=color:#75715e>#可以看到service console已经绑定 vmnic0</span>
+
+
+Switch Name   Num Ports  Used Ports Configured Ports MTU    Uplinks  
+vSwitch0      <span style=color:#ae81ff>64</span>         <span style=color:#ae81ff>5</span>          <span style=color:#ae81ff>64</span>               <span style=color:#ae81ff>1500</span>   vmnic0   
+PortGroup Name   VLAN ID    Used Ports Uplinks
+Service Console    <span style=color:#ae81ff>0</span>         <span style=color:#ae81ff>1</span>          vmnic0   
+
+
+esxcfg-vswif -a vswif0 -p <span style=color:#e6db74>&#34;Service Console&#34;</span> -i 192.168.1.1 -n 255.255.255.0               
+ <span style=color:#75715e>#创建vswif0并与service console绑定,在ESXi里ip地址只能跟vswif0绑定,也就是虚拟交换机的interface</span>
+
+esxcfg-vswif –l     <span style=color:#75715e>#可以看到Service console的IP已经配置到vswif0</span>
+Name    Port Group      IP Address    Netmask         Broadcast      Enabled  DHCP
+
+vswif0  Service Console 192.168.1.50   255.255.255.0    192.168.1.255  true  false 
+
+esxcfg-vswitch –l
+Switch Name   Num Ports  Used Ports Configured Ports MTU    Uplinks  
+vSwitch0      <span style=color:#ae81ff>64</span>         <span style=color:#ae81ff>5</span>          <span style=color:#ae81ff>64</span>               <span style=color:#ae81ff>1500</span>   vmnic0   
+PortGroup Name   VLAN ID    Used Ports Uplinks
+Service Console    <span style=color:#ae81ff>0</span>         <span style=color:#ae81ff>1</span>          vmnic0 
+
+service mgmt-vmware restart          <span style=color:#75715e>#重启服务,到这里正常情况下就可以使用VI连接到ESX</span>
+</code></pre></div><blockquote><p>如果不小心配置错了要删除，请看下面</p></blockquote><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>esxcfg-vswif –l   <span style=color:#75715e>#vswif0代表的虚拟网卡的interface0，service console对应vswif0</span>
+Name   Port Group      IP Address    Netmask       Broadcast     Enabled  DHCP
+
+vswif0 Service Console 192.168.1.1  255.255.255.0  192.168.1.255  true    false 
+
+esxcfg-vswif -d vswif0                 <span style=color:#75715e>#删除vswif0</span>
+esxcfg-vswitch -l
+
+Switch Name   Num Ports  Used Ports Configured Ports MTU    Uplinks  
+vSwitch0      <span style=color:#ae81ff>64</span>         <span style=color:#ae81ff>5</span>          <span style=color:#ae81ff>64</span>               <span style=color:#ae81ff>1500</span>   vmnic0   
+PortGroup Name   VLAN ID    Used Ports Uplinks
+Service Console    <span style=color:#ae81ff>0</span>         <span style=color:#ae81ff>1</span>          vmnic0          
+
+
+esxcfg-vswitch –D “Service Console” vSwitch0    <span style=color:#75715e>#删除vSwitch0上面portgroup</span>
+esxcfg-vswitch –D “VM Network” vSwitch0
+esxcfg-vswitch -d vSwitch0                <span style=color:#75715e>#删除vswitch0</span>
+esxcfg-vswitch –l           <span style=color:#75715e>#之前操作删除了vswitch信息,现在是空白</span>
+
+Switch Name   Num Ports  Used Ports Configured Ports MTU    Uplinks  
+PortGroup Name   VLAN ID    Used Ports Uplinks
+</code></pre></div><p>如果不行检查一下以下配置文件.</p><pre><code class=language-shelll data-lang=shelll>vi /etc/sysconfig/network                 #这里纪录主机名字和网关
+
+NETWORKING=yes
+HOSTNAME=VI3      
+GATEWAY=192.168.251.12         #网关
+GATEWAYDEV=vswif0                #网关指定在vswif0
+
+
+vi /etc/sysconfig/network-scripts/ifcfg-vswif0        #看看这里的信息是否跟之前配置吻合
+
+DEVICE=vswif0                        #之前把service cosole与vswif0关联     
+MACADDR=00:50:56:43:a3:52
+PORTGROUP=portgroup6     #这里的protgroup与service console一致 
+BOOTPROTO=static
+BROADCAST=192.168.251.255
+IPADDR=192.168.251.60                        #与service console一致
+NETMASK=255.255.255.0
+ONBOOT=yes
+</code></pre><p>如果以上不一致,可以手动更改</p><p>在vi编辑器中,i键是插入模式,进行文本更改,esc键退出插入模式,:wq保存并退出.</p><p>编辑完成reboot.可能启动后显示地址跟设置不同,但是可以使用VI连接到ESX</p><p>补：如果只想修改Service Console的IP可以直接执行以下命令：</p><p>esxcfg-vswif -i xxx.xxx.xxx.xxx vswif</p><h2 id=网络>网络</h2><h3 id=1-vmkernel-端口用途>1. VMKernel 端口用途</h3><ul><li>IP 存储、vSphere vMotion 迁移、vSphere Fault Tolerance、 vSAN 和 vSphere Replication</li><li>用于 ESXi管理网络</li></ul><h3 id=2-添加上行链路>2. 添加上行链路</h3><p>虚拟交换机，添加上行链路</p><ul><li>ESXi支持802.1Q VLAN标记功能。<ul><li>802.1Q 是中继协议。</li></ul></li><li>虚拟交换机标记是受支持的标记策略中的一种<ul><li>在来自虚拟机的帧从虚拟交换机传出时，为其添加相应的标记。</li><li>到达虚拟交换机的已标记帧在发送到目标虚拟机之前会被取消相应的标记。</li><li>对性能的影响微乎其微。</li></ul></li><li>ESXi通过为端口组指定 VLAN ID来提供 VLAN 支持。</li><li>虚拟网络支持以下虚拟交换机<ul><li>标准交换机<ul><li>单个主机的虚拟交换机配置</li></ul></li><li>分布式交换机<ul><li>可为在多台主机之间迁移的虚拟机提供一致网络配置的虚拟交换机</li></ul></li></ul></li></ul><h3 id=3-列出ip>3. 列出IP</h3><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>esxcli network ip interface ipv4 get
+Name  IPv4 Address   IPv4 Netmask   IPv4 Broadcast  Address Type  Gateway      DHCP DNS
+----  -------------  -------------  --------------  ------------  -----------  --------
+vmk0  192.168.2.230  255.255.255.0  192.168.2.255   DHCP          192.168.2.1     false
+</code></pre></div><h3 id=4-配置静态ip>4. 配置静态IP</h3><p>进入维护模式</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>esxcli system maintenanceMode set --enable true
+</code></pre></div><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=color:#f92672>[</span>root@ServerHost:~<span style=color:#f92672>]</span> esxcli network ip interface ipv4 set -i vmk0 -I 192.168.2.230 -N 255.255.255.0 -t static -g 192.168.2.1
+<span style=color:#f92672>[</span>root@ServerHost:~<span style=color:#f92672>]</span> esxcli network ip interface ipv4 get
+Name  IPv4 Address   IPv4 Netmask   IPv4 Broadcast  Address Type  Gateway      DHCP DNS
+----  -------------  -------------  --------------  ------------  -----------  --------
+vmk0  192.168.2.230  255.255.255.0  192.168.2.255   STATIC        192.168.2.1     false
+</code></pre></div><p>一个 Vmware ESXi 主机上只能配置一个默认网关</p><p>使用以下命令在 Vmware ESXi 服务器上配置默认路由：</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>esxcli network ip route ipv4 add --gateway 192.168.2.1 --network 0.0.0.0
+
+<span style=color:#f92672>[</span>root@ServerHost:~<span style=color:#f92672>]</span> esxcli network ip route ipv4 list
+Network      Netmask        Gateway      Interface  Source
+-----------  -------------  -----------  ---------  ------
+default      0.0.0.0        192.168.2.1  vmk0       DHCP
+192.168.2.0  255.255.255.0  0.0.0.0      vmk0       MANUAL
+</code></pre></div><p>修改服务器名称</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>esxcli system hostname set --host<span style=color:#f92672>=</span>newhostname
+</code></pre></div><p>添加DNS</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>esxcli network ip dns server add --server<span style=color:#f92672>=</span>8.8.8.8
+esxcli network ip dns server list
+</code></pre></div><p>退出维护模式</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>esxcli system maintenanceMode set --enable false
+reboot
+</code></pre></div><h3 id=5-安全策略>5. 安全策略</h3><ul><li>可在标准交换机级别和端口组级别定义安全策略<ul><li>Promiscuous mode 混杂模式<ul><li>无论目标是什么，虚拟交换机或端口组都可以转发所有流量</li></ul></li><li>MAC address changes MAC地址更改<ul><li>客户机更改了MAC地址的情况下接受或拒绝入站流量</li></ul></li><li>Forged transmits 伪信号<ul><li>客户机更改MAC地址的情况下接受或拒绝出站流量</li></ul></li></ul></li><li>默认时，标准交换机级别设置的策略将应用于标准交换机上的所有端口组。</li><li>可用的网络策略<ul><li>安全性</li><li>流量调整</li><li>网卡绑定和故障转移</li></ul></li><li>策略在以下级别定义<ul><li>标准交换机级别<ul><li>适用于标准交换机上所有端口的默认策略</li></ul></li><li>端口组级别<ul><li>有效策略，该级别定义的策略将覆盖在标准交换机级别设置的默认策略。</li></ul></li></ul></li></ul><h3 id=6-负载均衡>6. 负载均衡</h3><ol><li>源虚拟端口ID</li><li>源MAC哈希路由</li><li>基于IP哈希进行路由<ol><li>IP包括 源和目标</li><li>必须在物理交换机上做端口聚合</li></ol></li></ol><h3 id=7-基本存储>7. 基本存储</h3><ul><li><p>数据存储类型</p><ul><li><p>VMFS - 块操作</p></li><li><p>NFS - 文件写入</p></li></ul></li><li><p>存储技术</p><ul><li>直接连接 - 只服务于某台机器</li><li>光纤通道 - FcSAN</li><li>FCoE - 基于以太网</li><li>iSCSI - IPSAN</li><li>vSAN - 软件虚拟SAN</li><li>NAS</li></ul></li><li><p>存储协议</p><ul><li>光纤通道</li><li>FCoE</li><li>iSCSI</li><li>NFS</li><li>DAS</li><li>vSAN</li></ul></li><li><p>数据存储</p><ul><li>可使用一个或多个物理设备上的磁盘空间的逻辑存储单元</li><li>可用于存储虚拟机文件、模板和ISO镜像</li><li>数据存储类型<ul><li>VMFS</li><li>NFS</li><li>vSAN</li></ul></li><li></li></ul></li></ul></div></article></main><div class="authorbox clearfix"><figure class=authorbox__avatar><img alt="vicky avatar" src=/img/cat.jpg class=avatar height=90 width=90></figure><div class=authorbox__header><span class=authorbox__name>About vicky</span></div><div class=authorbox__description>.</div></div><nav class="pager flex"><div class="pager__item pager__item--prev"><a class=pager__link href=/env/virtualpc/ rel=prev><span class=pager__subtitle>«&#8201;Previous</span><p class=pager__title></p></a></div><div class="pager__item pager__item--next"><a class=pager__link href=/env/docker02_gitlab/ rel=next><span class=pager__subtitle>Next&#8201;»</span><p class=pager__title></p></a></div></nav></div></div><footer class=footer><div class="container footer__container flex"><div class=footer__links><a class=footer__link href=/code/pdfcombine/>Pdf Combine</a> | <a class=footer__link href=/code/python/>Python</a> | <a class=footer__link href=/code/qt5/>Qt5</a></div><div class=footer__copyright>&copy; 2022 © 2021 Vicky's Notes..
+<span class=footer__copyright-credits>Generated with <a href=https://gohugo.io/ rel="nofollow noopener" target=_blank>Hugo</a> and <a href=https://github.com/Vimux/Mainroad/ rel="nofollow noopener" target=_blank>Mainroad</a> theme.</span></div></div></footer></div><script async defer src=/js/menu.js></script><script src=/js/custom.js></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML" async></script></body></html>
