@@ -300,7 +300,9 @@ docker-compose 用于定义和运行多容器的docker工具， 可以使用yaml
 
 ```shell
 # ubuntu
-sudo apt-install docker-compose
+sudo apt-get upgrade 
+sudo apt-get install docker-compose
+sudo apt-get clean
 ```
 
 
@@ -423,4 +425,10 @@ docker-compose up --abort-on-container-exit
 ```shell
  docker start allure
 ```
+
+
+
+## 资料
+
++ [前言 - Docker — 从入门到实践  - gitbook.io](https://yeasy.gitbook.io/docker_practice/)
 

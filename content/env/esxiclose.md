@@ -94,6 +94,8 @@ ESXI的sh是链接到busybox的，相当于裁剪版bash，所以语法不可能
  ls -l $(which sh)
 lrwxrwxrwx    1 root     root            35 Aug  5  2019 /bin/sh -> /usr/lib/vmware/busybox/bin/busybox
 [1]+  Done                       /bin/sh ./ups_daemon.sh
+
+chmod +x ups_daemon.sh
 ```
 
 前面加过执行权限了，`./ups.sh` 和 `sh ups.sh` 都行，为了看到脚本处理逻辑，加个`-x`参数
@@ -128,7 +130,7 @@ exit 0
 ```sh
 [root@localhost:/vmfs/volumes/5f174c56-6a79f5cc-c990-a03e6ba0a187/ups]cat /etc/rc.local.d/local.sh
 /bin/kill $(cat /var/run/crond.pid)
-/bin/echo '*/3  *  *  *  *   /vmfs/volumes/data/ups/ups_daemon.sh' >> /var/spool/cron/crontabs/root
+/bin/echo '*/3  *  *  *  *   /vmfs/volumes/datastore1/ups/ups_daemon.sh' >> /var/spool/cron/crontabs/root
 /bin/crond
 exit 0
 [root@localhost:/vmfs/volumes/5f174c56-6a79f5cc-c990-a03e6ba0a187/ups]
@@ -140,9 +142,10 @@ ESXI的crond进程重启后会把写入的定时任务清空，只保留系统�
 懒人专用，一条命令即可，开机或重启后自动运行：
 
 ```sh
-[root@localhost:/vmfs/volumes/5f174c56-6a79f5cc-c990-a03e6ba0a187/ups]vim /etc/rc.local.d/local.sh #写入以下内容
-{ nohup sh /vmfs/volumes/data/ups/ups.sh; } &>/dev/null & #nohup后台运行脚本，并禁止在控制台输出stdout或stderr，禁止输出文本
-[root@localhost:/vmfs/volumes/5f174c56-6a79f5cc-c990-a03e6ba0a187/ups]
+[root@localhost:/vmfs/volumes/datastore1/ups]
+vim /etc/rc.local.d/local.sh #写入以下内容
+{ nohup sh /vmfs/volumes/datastore1/ups/ups.sh; } &>/dev/null & #nohup后台运行脚本，并禁止在控制台输出stdout或stderr，禁止输出文本
+[root@localhost:/vmfs/volumes/datastore1/ups]
 ```
 
 使用此方式后只有下次开机才会运行脚本，为了不重启直接运行一遍即可：
@@ -166,4 +169,35 @@ ps -c | grep ups.sh
  cat /var/spool/cron/crontabs/root
 ```
 
+## 修改文件格式
+
+windows文件复制后修改格式
+
+```shell
+#vim命令
+set ff=unix
+```
+
+```shell
+# 需提前安装dos2unix
+dos2unix test.sh
+```
+
+## 脚本修改
+
+Exsi 是6.0 使用是python3
+
+```shell
+cp /sbin/powerOffVms /vmfs/volumes/datastore1/poweroffvms
+cd /vmfs/volumes/datastore1/
+vi poweroffvms
+```
+
+修改
+
+```shell
+except vim.fault.ToolsUnavailable, e:
+# 修改为
+except vim.fault.ToolsUnavailable as e:
+```
 

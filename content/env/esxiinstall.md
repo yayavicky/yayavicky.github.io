@@ -72,6 +72,16 @@ Usage:
  Add Partition Information : add <diskName> <label> ["partNum startSector endSector type/guid attr"]
 ```
 
+### Issue CVE-2018-3646
+
+> 登录ESXi6.7主机后，系统提示“该主机可能容易受到 CVE-2018-3646 中所描述问题的影响，有关详细信息和 VMware 建议，请参阅 https://kb.vmware.com/s/article/55636。”
+
++ 导航器--管理--系统--高级设置
++ 搜索框输入`VMkernel.Boot.hyperthreadingMitigation`
+  + 禁止ESXi修补程序使用超线程
++ 编辑选项，改为True，保存
++ 重新引导后提示消失
+
 
 
 ## 3. 快捷键
@@ -95,6 +105,14 @@ ssh命令
 ### 备份
 
 `ovftool.exe vi://root:@192.168.1.1/vmname  localPath/name.ova`
+
+
+
+```shell
+'C:\Program Files (x86)\VMware\VMware Workstation\OVFTool\ovftool.exe' vi://root:@192.168.1.1/vmname  D:\CDriver\ovf\Kis01Office.ova
+```
+
+
 
 
 
